@@ -52,64 +52,184 @@
       </nav>
     </header>
 
-    <footer class="footer-index">
-      <section class="mailing">
-        <div class="mailing-title">
-          <h2>Подпишитесь<br>на рассылку</h2>
-        </div>
-        <p>Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами, распаковками,
-          а также акции, спецпредложения и вот это вот всё.</p>
-        <form class="mailing-form" name="mailing-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input type="email" class="mailing-edit" name="mailing-edit" placeholder="Ваш e-mail">
-          <button type="submit">Подписаться</button>
-          <img class="check-mark-image" src="" alt="Маркер">
-          <label>Это бесплатно</label>
-        </form>
+    <main class="main-catalog">
+      <div class="container-title-page">
+        <h1 class="title-page">Моноподы для селфи</h1>
+        <p>
+          <a class="catalog-page-navigation main-catalog-page" href="index.html">Главная</a>
+          <ul class="catalog-page-navigation-list">
+            <li>
+              <a class="catalog-page-navigation" href="">Каталог товаров</a>
+            </li>
+            <li>
+              <a class="catalog-page-navigation" href="">Моноподы для селфи</a>
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div class="container-catalog-product">
+        <section class="section-filter">
+          <h2 class="section-filter-title">Фильтр:</h2>
+          <form class="form-section-filter" name="form-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <section class="filter-price">
+              <h3 class="filter-title">Стоимость</h3>
+              <input type="range"> <!-- Данный элемент необходимо изменить для выбора диапазона-->
+              <p class="price-min">от 0</p>
+              <p class="price-max">до 5000</p>
+            </section>
+            <section class="filter-color">
+              <h3 class="filter-title">Цвет</h3>
+              <p>
+                <input type="checkbox" name="black" id="black" checked>
+                <label for="black">Черный</label>
+              </p>
+              <p>
+                <input type="checkbox" name="white" id="white" checked>
+                <label for="black">Белый</label>
+              </p>
+              <p>
+                <input type="checkbox" name="blue" id="blue">
+                <label for="black">Синий</label>
+              </p>
+              <p>
+                <input type="checkbox" name="red" id="red">
+                <label for="black">Красный</label>
+              </p>
+              <p>
+                <input type="checkbox" name="pink" id="pink">
+                <label for="black">Розовый</label>
+              </p>
+            </section>
+            <section class="filter-bluetooth">
+              <h3 class="filter-title">Bluetooth</h3>
+              <p>
+                <input type="radio" name="Bluetooth" id="yes" value="yes" checked>
+                <label for="yes">Есть</label>
+              </p>
+              <p>
+                <input type="radio" name="Bluetooth" id="no" value="no" checked>
+                <label for="no">Нет</label>
+              </p>
+            </section>
+            <button class="show-product-list" type="submit">Показать</button>
+          </form>
+        </section>
+        <section class="section-sorted">
+          <h2 class="section-sorted-title">Сортировка:</h2>
+          <select class="select-sorted" name="sorted">
+            <option class="sorted-value" selected>Популярные</option>
+          </select>
+          <img class="sorted-up" src="" alt="Кнопка по возрастанию">
+          <img class="sorted-down" src="" alt="Кнопка по убыванию">
+        </section>
+        <section class="section-product-list">
+          <ul class="product-list">
+            <li class="product-item">
+              <div class="product-card">
+                <img class="fhoto-product" src="" alt="Люительская селфи-палка">
+                <div class="container-product-name-price">
+                  <p class="product-name">Люительская селфи-палка</p>
+                  <p class="product-price">500 ₽</p>
+                </div>
+              </div>
+            </li>
+            <li class="product-item">
+              <div class="product-card">
+                <img class="fhoto-product" src="" alt="Профессиональная селфи-палка ">
+                <div class="container-product-name-price">
+                  <p class="product-name">Профессиональная селфи-палка </p>
+                  <p class="product-price">1500 ₽</p>
+                </div>
+              </div>
+            </li>
+            <li class="product-item">
+              <div class="product-card">
+                <img class="fhoto-product" src="" alt="Непотопляемая селфи-палка">
+                <div class="container-product-name-price">
+                  <p class="product-name">Непотопляемая селфи-палка</p>
+                  <p class="product-price">2500 ₽</p>
+                </div>
+              </div>
+            </li>
+            <li class="product-item">
+              <div class="product-card">
+                <img class="fhoto-product" src="" alt="Селфи-палка «Следуй за мной»">
+                <div class="container-product-name-price">
+                  <p class="product-name">Селфи-палка «Следуй за мной»</p>
+                  <p class="product-price">1500 ₽</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <button class="load-product">Загрузить еще</button>
+        <nav class="product-page-navigation">
+          <a class="pred-page" href="#">Назад</a>
+          <ul class="page-number-list">
+            <li class="page-number-item">
+              <a class="page-number" href="#">1</a>
+            </li>
+            <li class="page-number-item">
+              <a class="page-number" href="#">2</a>
+            </li>
+            <li class="page-number-item">
+              <a class="page-number" href="#">3</a>
+            </li>
+            <li class="page-number-item">
+              <p class="page-number">...</p>
+            </li>
+            <li class="page-number-item">
+              <a class="page-number" href="#">15</a>
+            </li>
+          </ul>
+          <a class="succ-page" href="#">Вперед</a>
+        </nav>
+      </div>
+    </main>
+
+    <footer class="footer-page">
+      <section class="footer-page-logo-addres">
+        <img class="footer-page-logo" src="" alt="Логотип device">
+        <p class="footer-page-addres">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.</p>
+        <img class="footer-page-horizontal-marker" src="" alt="Горизонтальный маркер">
       </section>
-      <section class="footer-page">
-        <section class="footer-page-logo-addres">
-          <img class="footer-page-logo" src="" alt="Логотип device">
-          <p class="footer-page-addres">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.</p>
-          <img class="footer-page-horizontal-marker" src="" alt="Горизонтальный маркер">
-        </section>
-        <section class="footer-page-navigation-social-network">
-          <nav class="footer-page-navigation">
-            <ul class="footer-page-navigation-list">
-              <li class="footer-page-navigation-item">
-                <a class="footer-page-navigation-link" href="#">Доставка</a>
-              </li>
-              <li class="footer-page-navigation-item">
-                <a class="footer-page-navigation-link" href="#">Гарантия</a>
-              </li>
-              <li class="footer-page-navigation-item">
-                <a class="footer-page-navigation-link" href="#">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="container-social-network">
-            <ul class="social-network-list">
-              <li class="social-network-item">
-                <a href="#">
-                  <img class="telegram" src="" alt="Telegram">
-                </a>
-              </li>
-              <li class="social-network-item">
-                <a href="#">
-                  <img class="youtube" src="" alt="Yuotube">
-                </a>
-              </li>
-              <li class="social-network-item">
-                <a href="#">
-                  <img class="twitter" src="" alt="Twitter">
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="dev-contacts">
-          <p class="telephon">Тел.: +7 (812) 812-12-12</p>
-          <img class="dev-logo" src="" alt="Логотип HTML-академии">
-        </section>
+      <section class="footer-page-navigation-social-network">
+        <nav class="footer-page-navigation">
+          <ul class="footer-page-navigation-list">
+            <li class="footer-page-navigation-item">
+              <a class="footer-page-navigation-link" href="#">Доставка</a>
+            </li>
+            <li class="footer-page-navigation-item">
+              <a class="footer-page-navigation-link" href="#">Гарантия</a>
+            </li>
+            <li class="footer-page-navigation-item">
+              <a class="footer-page-navigation-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="container-social-network">
+          <ul class="social-network-list">
+            <li class="social-network-item">
+              <a href="#">
+                <img class="telegram" src="" alt="Telegram">
+              </a>
+            </li>
+            <li class="social-network-item">
+              <a href="#">
+                <img class="youtube" src="" alt="Yuotube">
+              </a>
+            </li>
+            <li class="social-network-item">
+              <a href="#">
+                <img class="twitter" src="" alt="Twitter">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="dev-contacts">
+        <p class="telephon">Тел.: +7 (812) 812-12-12</p>
+        <img class="dev-logo" src="" alt="Логотип HTML-академии">
       </section>
     </footer>
   </body>
