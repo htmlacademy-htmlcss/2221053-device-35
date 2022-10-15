@@ -1,7 +1,7 @@
 @font-face {
   font-family: Raleway, Arial, sans-serif;
   font-style: normal;
-  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  src: url("../fonts/'Raleway'/'Raleway'-800.woff2") format("woff2");
   font-weight: 800;
   font-display: swap;
 }
@@ -9,7 +9,7 @@
 @font-face {
   font-family: Rubik, Arial, sans-serif;
   font-style: normal;
-  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  src: url("../fonts/'Rubik'/'Rubik'-400.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
@@ -17,7 +17,7 @@
 @font-face {
   font-family: Rubik, Arial, sans-serif;
   font-style: normal;
-  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  src: url("../fonts/'Rubik'/'Rubik'-700.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
@@ -25,10 +25,11 @@
 .visually-hidden {display: none;}
 
 body {
-  font-family: Rubik,Arial, sans-serif;
+  font-family: 'Rubik',Arial, sans-serif;
   font-style: normal;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
+  line-height: calc(5 / 4);
   color: #444444;
   background: #FFFFFF;
 }
@@ -40,26 +41,61 @@ a {
 
 ul {
   list-style-type: none;
+  padding-left: 0;
+}
+
+nav a,
+h1,
+h2,
+h3,
+h4,
+.gold-button,
+.main-category-list {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-weight: 800;
+  color: #000000;
 }
 
 .gold-button {
   background-image: url(../images/gold-line.svg);
   background-repeat: repeat-x;
   background-position: center;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.link-button {
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
                     /*...header*/
 
 
-.header {
-  color: #000000;
+.header,
+.search-form input,
+.search-form button {
   background: #FFE17F;
 }
 
-.user-menu {
-  font-weight: 400;
+.search-form input,
+.search-form button {
+  font: inherit;
+  color: #000000;
+}
+
+.user-menu,
+.slide-description p,
+.services-description p,
+.about p,
+.contacts p,
+.contacts .phone-number,
+.subscription p,
+.subscription form input,
+.subscription small {
   font-size: 18px;
-  line-height: 30px;
+  line-height: calc(5 / 3);
 }
 
 .quantity-goods {
@@ -71,18 +107,18 @@ ul {
 }
 
 .header>nav {
-  font-family: Raleway, Arial, sans-serif;
+  font-family: 'Raleway', Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
-  line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
 .catalog-list {
+  font-family: 'Rubik', Arial, sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 18px;
+  line-height: calc(8 /9);
   text-transform: none;
 }
 
@@ -93,32 +129,118 @@ ul {
 
 
 .slide-section {
-  /*opacity: 0;*/
   color: #000000;
 }
 
 .slide-number { /*Элемент перекрывает другой элемент*/
   font-weight: 700;
   font-size: 180px;
-  line-height: 30px;
+  line-height: 1.0;
   color: #FFFFFF;
 }
 
-.slide-description h3 {
-  font-family: Raleway, Arial, sans-serif;
-  font-weight: 800;
+.slide-description h3,
+.services-description h3,
+.subscription h2 {
   font-size: 50px;
-  line-height: 50px;
+  line-height: 1.0;
 }
 
 .slide-description p {
   font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
 }
 
-.slide-description a {
-  font-family: Raleway, Arial, sans-serif;
+.slide-feature-value {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: calc(5 / 6);
+}
+
+.slide-feature {
+  line-height: calc(15 / 8);
+  text-align: left;
+  color: #444444;
+}
+
+
+.main-category-list {
+  font-size: 18px;
+  line-height: calc(4 / 3);
+  letter-spacing: -0.02em;
+}
+
+.main-category-list li ::before {
+  display: inline-block;
+  background: #FFE17F;
+}
+
+.main-category-list :first-child ::before { content: url(../images/virtual.svg); }
+
+.main-category-list :nth-child(2) ::before { content: url(../images/monopads.svg); }
+
+.main-category-list :nth-child(3) ::before { content: url(../images/cameras.svg); }
+
+.main-category-list :nth-child(4) ::before { content: url(../images/braslets.svg); }
+
+.main-category-list :nth-child(5) ::before { content: url(../images/watch.svg); }
+
+.main-category-list :last-child ::before {
+  content: url(../images/quadrocopters.svg);
+  background: #FFE17F;
+}
+
+.services { background: #F0F0F0; }
+
+.services-list { color: #000000; }
+
+.services-list .active{
+  color: #FFE17F;
+  background: #000000;
+
+}
+
+.services-description p { color: #444444; }
+
+.delivery { background: #F0F0F0; }
+
+.delivery a {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.delivery span { background: rgba(220, 220, 220, 0.5); }
+
+.about h3, .contacts h3 {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.about ul {
+  list-style-type: disc;
+  padding-left: 34px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(10 / 9);
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.contacts h4 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.contacts .phone-number {
+  text-decoration-line: underline;
+  letter-spacing: 0;
+}
+
+.subscription { background: #F0F0F0; }
+
+.subscription-form button {
+  font-family: 'Raleway',Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
@@ -127,26 +249,40 @@ ul {
   text-transform: uppercase;
 }
 
-.slide-feature-value {
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 30px;
+.subscription form input { font: inherit; }
+
+
+
+                                    /*FOOTER*/
+
+
+
+footer {
+  color: #FFFFFF;
+  background: #444444;
 }
 
-.slide-feature {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 30px;
-  text-align: left;
-  color: #444444;
+footer a { color: #FFFFFF; }
+
+.footer-navigation-item a{
+ font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
+
+
+
+                                            /*index.html
+                                              MAIN*/
+
 
 .catalog-main-header {
   color: #000000;
 }
 
 h1 {
-  font-family: Raleway, Arial, sans-serif;
+  font-family: 'Raleway', Arial, sans-serif;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
@@ -172,7 +308,7 @@ h1 {
 }
 
 .filter h2, .sorted-selection h2{
-  font-family: Raleway, Arial, sans-serif;
+  font-family: 'Raleway', Arial, sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
@@ -203,7 +339,7 @@ h1 {
 }
 
 .filter-form button {
-  font-family: Raleway, Arial, sans-serif;
+  font-family: 'Raleway', Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
@@ -238,7 +374,7 @@ h1 {
 }
 
 .product-details {
-  font-family: Raleway, Arial, sans-serif;
+  font-family: 'Raleway', Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
@@ -248,7 +384,7 @@ h1 {
 }
 
 .more-products {
-  font-family: Raleway, Arial, sans-serif;
+  font-family: 'Raleway', Arial, sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 19px;
@@ -270,8 +406,8 @@ h1 {
   opacity: 0.3;
 }
 
-.navigation-catalog-pages :first-child a {
-  font-family: Raleway, Arial, sans-serif;
+.navigation-catalog-pages:first-child a {
+  font-family: 'Raleway', Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
@@ -279,7 +415,7 @@ h1 {
   text-transform: uppercase;
 }
 
-.navigation-catalog-pages :nth-child(2) a {
+.navigation-catalog-pages:nth-child(2) a {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -287,227 +423,12 @@ h1 {
   opacity: 0.6;
 }
 
-.navigation-catalog-pages :last-child a {
-  font-family: Raleway,Arial, sans-serif;
+.navigation-catalog-pages:last-child a {
+  font-family: 'Raleway',Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   opacity: unset;
-}
-
-.main-category-list {
-  font-family: Raleway, Arial, sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: -0.02em;
-  color: #000000;
-}
-
-.main-category-list :first-child ::before {
-  content: url(../images/virtual.svg);
-  background: #FFE17F;
-}
-
-.main-category-list :nth-child(2) ::before {
-  content: url(../images/monopads.svg);
-  background: #FFE17F;
-}
-
-.main-category-list :nth-child(3) ::before {
-  content: url(../images/cameras.svg);
-  background: #FFE17F;
-}
-
-.main-category-list :nth-child(4) ::before {
-  content: url(../images/braslets.svg);
-  background: #FFE17F;
-}
-
-.main-category-list :nth-child(5) ::before {
-  content: url(../images/watch.svg);
-  background: #FFE17F;
-}
-
-.main-category-list :last-child ::before {
-  content: url(../images/quadrocopters.svg);
-  background: #FFE17F;
-}
-
-.services {
-  background: #F0F0F0;
-}
-
-.services-list {
-  color: #000000;
-}
-
-.services-item-active a{
-  font-family: Raleway, Arial, sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #FFE17F;
-  background: #000000;
-
-}
-
-.services-list a{
-  font-family: Raleway, Arial, sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.services-description h3{
-  font-family: Raleway, Arial, sans-serif;
-  font-weight: 800;
-  font-size: 50px;
-  line-height: 50px;
-}
-
-.services-description p {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  color: #444444;
-}
-
-.delivery {
-  background: #F0F0F0;
-}
-
-.delivery a {
-  font-family: Raleway, Arial, sans-serif;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.delivery span {
-  background: rgba(220, 220, 220, 0.5);
-}
-
-.about h3, .contacts h3 {
-  font-family: Raleway, Arial, sans-serif;
-  font-weight: 800;
-  font-size: 50px;
-  line-height: 50px;
-  color: #000000;
-}
-
-.about p, .contacts p{
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  color: #444444;
-}
-
-.about ul {
-  font-family: Rubik, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-  letter-spacing: -0.02em;
-  color: #000000;
-}
-
-.about a, .contacts a {
-  font-family: Raleway, Arial, sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.contacts h4 {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-}
-
-.contacts .phone-number {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  text-decoration-line: underline;
-  letter-spacing: 0;
-}
-
-.subscription {
-  background: #F0F0F0;
-}
-
-.subscription h2 {
-  font-family: Raleway, Arial, sans-serif;
-  font-weight: 800;
-  font-size: 50px;
-  line-height: 50px;
-  color: #000000;
-}
-
-.subscription p {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-}
-
-.subscription form button {
-  font-family: Raleway,Arial, sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.subscription form input {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-}
-
-.subscription small {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-}
-
-
-                                    /*FOOTER*/
-
-
-
-footer {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: #FFFFFF;
-  background: #444444;
-}
-
-.footer-navigation-item a{
-  font-family: Raleway, Arial, sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #FFFFFF;
 }

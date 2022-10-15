@@ -16,16 +16,11 @@
         </form>
         <h2 class="visually-hidden">Меню пользователя.</h2>
         <ul class="user-menu">
-          <li>
-            <a href=""></a>
-            <a class="item" href="#">Войти</a>
-          </li>
-          <li>
-            <a href="#">Сравнение</a>
-          </li>
+          <li><a class="item" href="#">Войти</a></li>
+          <li><a href="#">Сравнение</a></li>
           <li>
             <h3 class="visually-hidden">Количество товаров в корзине</h3>
-            <a href="#"><p><span class="quantity-goods">2</span>Корзина</p></a>
+            <a href="#"><span class="quantity-goods">2</span>Корзина</a>
           </li>
         </ul>
       </section>
@@ -61,7 +56,7 @@
             <h3>Порхает как бабочка,
               жалит как пчела!</h3>
             <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-            <a class="gold-button" href="#">Подробнее</a>
+            <a class="gold-button link-button" href="#">Подробнее</a>
             <table>
               <tr>
                 <td class="slide-feature-value">800 м</td>
@@ -81,7 +76,7 @@
             <h3>Худеем
               правильно!</h3>
             <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-            <a class="gold-button" href="#">Подробнее</a>
+            <a class="gold-button link-button" href="#">Подробнее</a>
             <table>
               <tr>
                 <td class="slide-feature-value">48 часов</td>
@@ -99,7 +94,7 @@
             <h3>Делай селфи,
               как Бен Стиллер! </h3>
             <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-            <a class="gold-button" href="#">Подробнее</a>
+            <a class="gold-button link-button" href="#">Подробнее</a>
             <table>
               <tr>
                 <td class="slide-feature-value">8,5 м</td>
@@ -132,8 +127,8 @@
         <a id="services"></a>
         <h2 class="visually-hidden">Наши услуги</h2>
         <ul class="services-list">
-          <li  class="services-item-active">
-            <a href="#">Доставка</a>
+          <li>
+            <a class="gold-button link-button active" href="#">Доставка</a>
             <article class="services-description">
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо
@@ -142,7 +137,7 @@
             </article>
           </li>
           <li>
-            <a class="gold-button" href="#">Гарантия</a>
+            <a class="gold-button link-button" href="#">Гарантия</a>
             <article class="services-description">
               <h3>Гарантия</h3>
               <p>Если из-за возгорания купленного у нас товара у вас
@@ -151,7 +146,7 @@
             </article>
           </li>
           <li>
-            <a class="gold-button" href="#">Кредит</a>
+            <a class="gold-button link-button" href="#">Кредит</a>
             <article class="services-description">
               <h3>Кредит</h3>
               <p>Залезть в долговую яму стало проще! Кредитные
@@ -162,7 +157,7 @@
         </ul>
       </section>
       <article class="delivery">
-        <a href="#">Доставим редкий товар под заказ</a>
+        <a class="link-button" href="#">Доставим редкий товар под заказ</a>
         <span class="information"></span>
         <img src="images/information.svg" width="2px" height="12px" alt="Информация">
       </article>
@@ -177,7 +172,7 @@
             <li>СДИК</li>
             <li>ТоксБерри</li>
           </ul>
-          <a class="gold-button" href="#">Подробнее о нас</a>
+          <a class="gold-button link-button" href="#">Подробнее о нас</a>
         </article>
         <article class="contacts">
           <a id="contacts"></a>
@@ -189,14 +184,14 @@
           <a class="phone-number" href="#">+7 (812) 812-12-12</a>
           <h4>Время работы</h4>
           <p>пн—пт: с 10:00 до 22:00<br>сб—вс: с 10:00 до 19:00</p>
-          <a class="gold-button" href="#">Напишите нам</a>
+          <a class="gold-button link-button" href="#">Напишите нам</a>
         </article>
       </section>
       <section class="subscription">
         <h2>Подпишитесь на рассылку</h2>
         <p>Еженедельный дайджест с обзорами новинок,длительными тест-драйвами, распаковками,
           а также акции, спецпредложения и вот это вот всё.</p>
-        <form name="mailing-form" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="subscription-form" name="mailing-form" action="https://echo.htmlacademy.ru/" method="post">
           <input type="email" name="mailing-edit" placeholder="Ваш e-mail">
           <button type="submit">Подписаться</button>
         </form>
