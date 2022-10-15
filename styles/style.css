@@ -1,47 +1,47 @@
 @font-face {
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
-  src: url("../fonts/raleway/raleway-800.woff2") format("wolf2");
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
   font-weight: 800;
   font-display: swap;
 }
 
 @font-face {
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-style: italic;
-  src: url("../fonts/raleway/raleway-800.woff2") format("wolf2");
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
   font-weight: 800;
   font-display: swap;
 }
 
 @font-face {
-  font-family: Rubic;
+  font-family: Rubik, Arial, sans-serif;
   font-style: normal;
-  src: url("../fonts/rubik/rubik-400.woff2") format("wolf2");
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: Rubic;
+  font-family: Rubik, Arial, sans-serif;
   font-style: italic;
-  src: url("../fonts/rubik/rubik-400.woff2") format("wolf2");
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: Rubic;
+  font-family: Rubik, Arial, sans-serif;
   font-style: normal;
-  src: url("../fonts/rubik/rubik-700.woff2") format("wolf2");
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
 
 @font-face {
-  font-family: Rubic;
+  font-family: Rubik, Arial, sans-serif;
   font-style: italic;
-  src: url("../fonts/rubik/rubik-700.woff2") format("wolf2");
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
@@ -49,7 +49,7 @@
 .visually-hidden {display: none;}
 
 body {
-  font-family: "Rubik",sans-serif;
+  font-family: Rubik,Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: #444444;
@@ -96,7 +96,7 @@ ul {
 }
 
 .header>nav {
-  font-family: "Raleway", sans-serif;
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -133,7 +133,7 @@ ul {
 }
 
 .slide-description h3 {
-  font-family: "Raleway", sans-serif;
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
@@ -148,7 +148,7 @@ ul {
 }
 
 .slide-description a {
-  font-family: 'Raleway';
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -179,7 +179,7 @@ ul {
 }
 
 h1 {
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
@@ -207,7 +207,7 @@ h1 {
 }
 
 .filter h2, .sorted-selection h2{
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 16px;
@@ -242,7 +242,7 @@ h1 {
 }
 
 .filter-form button {
-  font-family: 'Raleway';
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -281,7 +281,7 @@ h1 {
 }
 
 .product-details {
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -292,7 +292,7 @@ h1 {
 }
 
 .more-products {
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 16px;
@@ -317,7 +317,7 @@ h1 {
 }
 
 .navigation-catalog-pages :first-child a {
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -336,7 +336,7 @@ h1 {
 }
 
 .navigation-catalog-pages :last-child a {
-  font-family: 'Raleway',sans-serif;
+  font-family: Raleway,Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -347,7 +347,7 @@ h1 {
 }
 
 .main-category-list {
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -395,7 +395,7 @@ h1 {
 }
 
 .services-item-active a{
-  font-family: 'Raleway';
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -409,7 +409,7 @@ h1 {
 }
 
 .services-list a{
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -420,7 +420,7 @@ h1 {
 }
 
 .services-description h3{
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
@@ -440,7 +440,7 @@ h1 {
 }
 
 .delivery a {
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 20px;
@@ -456,7 +456,7 @@ h1 {
 }
 
 .about h3, .contacts h3 {
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
@@ -473,7 +473,7 @@ h1 {
 }
 
 .about ul {
-  font-family: 'Rubik';
+  font-family: Rubik, Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -483,7 +483,7 @@ h1 {
 }
 
 .about a, .contacts a {
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -515,7 +515,7 @@ h1 {
 }
 
 .subscription h2 {
-  font-family: 'Raleway';
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
@@ -531,7 +531,7 @@ h1 {
 }
 
 .subscription form button {
-  font-family: 'Raleway',sans-serif;
+  font-family: Raleway,Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -570,7 +570,7 @@ footer {
 }
 
 .footer-navigation-item a{
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, Arial, sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
