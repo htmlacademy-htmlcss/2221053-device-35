@@ -7,7 +7,7 @@
   </head>
   <body>
     <header class="header">
-      <a href="index.html"><img src="images/logo-header.svg" width="145" height="36" alt="Логотип device"></a>
+      <a href="index.html"><img class="logo" src="images/logo-header.svg" width="145" height="36" alt="Логотип device"></a>
       <section>
         <form class="search-form" name="search-form" action="https://echo.htmlacademy.ru/" method="get">
           <input class="search-edit" type="search" name="search-edit" placeholder="Поиск по сайту">
@@ -15,12 +15,13 @@
         </form>
         <h2 class="visually-hidden">Меню пользователя.</h2>
         <ul class="user-menu">
-          <li><a class="item" href="#">Николай Петухов</a></li>
-          <li><a class="item" href="#">Выйти</a></li>
+          <li class="item-name"><a href="#">Николай Петухов</a></li>
+          <li><a href="#">Выйти</a></li>
           <li><a href="#">Сравнить</a></li>
           <li>
             <h3 class="visually-hidden">Количество товаров в корзине</h3>
-            <a href="#"><span class="quantity-goods">2</span>Корзина</a>
+            <span class="quantity-goods">2</span>
+            <a href="#">Корзина</a>
           </li>
         </ul>
       </section>

@@ -1,5 +1,5 @@
 @font-face {
-  font-family: Raleway, Arial, sans-serif;
+  font-family: Raleway;
   font-style: normal;
   src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
   font-weight: 800;
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: Rubik, Arial, sans-serif;
+  font-family: Rubik;
   font-style: normal;
   src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
   font-weight: 400;
@@ -15,12 +15,14 @@
 }
 
 @font-face {
-  font-family: Rubik, Arial, sans-serif;
+  font-family: Rubik;
   font-style: normal;
   src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
+
+html { height: 100%; }
 
 body {
   font-family: 'Rubik',Arial, sans-serif;
@@ -30,6 +32,13 @@ body {
   line-height: calc(5 / 4);
   color: #444444;
   background: #FFFFFF;
+
+  margin: 0 auto;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .visually-hidden {display: none;}
@@ -79,10 +88,56 @@ h4,
   background: #FFE17F;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
+  width: 1160px;
+  min-height: 232px;
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+.header .logo,
+.header section,
+.header nav,
+.header form,
+.header ul {
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.logo {
+  margin-top: -25px;
+  vertical-align: middle;
+}
+
+.header section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 26px;
+}
+
+.search-form {
+  width: 50%;
+}
+
 .search-form input,
 .search-form button {
   font: inherit;
   color: #000000;
+  float: left;
+}
+
+.search-form input {
+  width: 69%;
+}
+
+.search-form button {
+  width: 31%;
 }
 
 .user-menu,
@@ -98,6 +153,17 @@ h4,
   line-height: calc(5 / 3);
 }
 
+.user-menu {
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+  gap: 36px;
+}
+
+.item-name {
+  flex-grow: 1;
+}
+
 .quantity-goods {
   font-weight: 400;
   font-size: 14px;
@@ -106,12 +172,20 @@ h4,
   background: #FFFFFF;
 }
 
-.header>nav {
+.header-nav-list {
   font-family: 'Raleway', Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+}
+
+.header-nav-list :nth-child(2) {
+  flex-grow: 1;
 }
 
 .catalog-list {
@@ -120,6 +194,7 @@ h4,
   font-size: 16px;
   line-height: calc(8 /9);
   text-transform: none;
+  display: none;
 }
 
 
@@ -127,6 +202,8 @@ h4,
                       /*MAIN*/
 
 
+
+main { flex-grow: 1;}
 
 .slide-section {
   color: #000000;
