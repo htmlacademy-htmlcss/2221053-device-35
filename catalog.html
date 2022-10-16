@@ -7,46 +7,42 @@
   </head>
   <body>
     <header class="header">
-    <a href="index.html"><img src="images/logo-header.svg" width="145" height="36" alt="Логотип device"></a>
-    <section>
-      <form class="search-form" name="search-form" action="https://echo.htmlacademy.ru/" method="get">
-        <input class="search-edit" type="search" name="search-edit" placeholder="Поиск по сайту">
-        <button type="submit">Найти</button>
-      </form>
-      <h2 class="visually-hidden">Меню пользователя.</h2>
-      <ul class="user-menu">
-        <li>
-          <a href="">Николай Петухов</a>
-          <a>Выйти</a>
-        </li>
-        <li>
-          <a href="#">Сравнение</a>
-        </li>
-        <li>
-          <h3 class="visually-hidden">Количество товаров в корзине</h3>
-          <a href="#"><p><span class="quantity-goods">2</span>Корзина</p></a>
-        </li>
-      </ul>
-    </section>
-    <nav>
-      <ul>
-        <li>
-          <a href="catalog.html">Каталог товаров</a>
-          <button>+</button>
-          <ul class="catalog-list">
-            <li><a href="#">Виртуальная реальность</a></li>
-            <li><a href="catalog.html">Моноподы для селфи</a></li>
-            <li><a href="#">Экшн-камеры</a></li>
-            <li><a href="#">Фитнес-браслеты</a></li>
-            <li><a href="#">Умные часы</a></li>
-            <li><a href="#">Квадрокоптеры</a></li>
-          </ul>
-        </li>
-        <li><a href="#services">Доставка</a></li>
-        <li><a href="#services">Гарантия</a></li>
-        <li><a href="#contacts">Контакты</a></li>
-      </ul>
-    </nav>
+      <a href="index.html"><img src="images/logo-header.svg" width="145" height="36" alt="Логотип device"></a>
+      <section>
+        <form class="search-form" name="search-form" action="https://echo.htmlacademy.ru/" method="get">
+          <input class="search-edit" type="search" name="search-edit" placeholder="Поиск по сайту">
+          <button type="submit">Найти</button>
+        </form>
+        <h2 class="visually-hidden">Меню пользователя.</h2>
+        <ul class="user-menu">
+          <li><a class="item" href="#">Николай Петухов</a></li>
+          <li><a class="item" href="#">Выйти</a></li>
+          <li><a href="#">Сравнить</a></li>
+          <li>
+            <h3 class="visually-hidden">Количество товаров в корзине</h3>
+            <a href="#"><span class="quantity-goods">2</span>Корзина</a>
+          </li>
+        </ul>
+      </section>
+      <nav>
+        <ul>
+          <li>
+            <a href="catalog.html">Каталог товаров</a>
+            <button>+</button>
+            <ul class="catalog-list">
+              <li><a href="#">Виртуальная реальность</a></li>
+              <li><a href="catalog.html">Моноподы для селфи</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
+              <li><a href="#">Фитнес-браслеты</a></li>
+              <li><a href="#">Умные часы</a></li>
+              <li><a href="#">Квадрокоптеры</a></li>
+            </ul>
+          </li>
+          <li><a href="#services">Доставка</a></li>
+          <li><a href="#services">Гарантия</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
       <header class="catalog-main-header">
@@ -129,20 +125,19 @@
               <span>1500 ₽</span>
             </li>
           </ul>
-          <a class="more-products" href="#">Загрузить еще</a>
+          <a class="link-button more-products" href="#">Загрузить еще</a>
           <ul class="navigation-catalog-pages">
             <li><a href="#">Назад</a></li>
-            <li><a>1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a>...</a></li>
-            <li><a href="#">15</a></li>
+            <li><a class="page-number">1</a></li>
+            <li><a class="page-number" href="#">2</a></li>
+            <li><a class="page-number" href="#">3</a></li>
+            <li><a class="page-number">...</a></li>
+            <li><a class="page-number" href="#">15</a></li>
             <li><a href="#">Вперед</a></li>
           </ul>
         </section>
       </section>
     </main>
-
     <footer>
       <section>
         <a href="#"><img src="images/logo-footer.svg" width="145" height="36" alt="Логотип device"></a>
