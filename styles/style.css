@@ -94,9 +94,9 @@ h4,
   justify-content: flex-start;
   gap: 30px;
   width: 1160px;
-  min-height: 232px;
   padding-right: 60px;
   padding-left: 60px;
+  padding-bottom: 20px;
 }
 
 .header .logo,
@@ -199,28 +199,49 @@ h4,
 
 
 
-                      /*MAIN*/
 
 
+                              /*Slider section*/
 
-main { flex-grow: 1;}
 
-.slide-section {
+.slide-section { background: linear-gradient(to bottom, #ffe17f 26.5%, #FFFfff 26.5%); }
+
+.slide-section article{
   color: #000000;
+
+  position: relative;
+  width: 1160px;
+  display: none;
+  margin-top: 0;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
-.slide-number { /*Элемент перекрывает другой элемент*/
-  font-weight: 700;
-  font-size: 180px;
-  line-height: 1.0;
-  color: #FFFFFF;
-}
+
+.slide-section .slide-active { display: flex;}
 
 .slide-description h3,
 .services-description h3,
 .subscription h2 {
   font-size: 50px;
   line-height: 1.0;
+}
+
+.slide-description {
+  padding-top: 70px;
+  position: relative;
+}
+
+.slide-section article::before {
+  content: "01";
+  font-weight: 700;
+  font-size: 180px;
+  line-height: 1.0;
+  color: #FFFfff;
+
+  position: absolute;
+  right: 88px;
+  top: 0;
 }
 
 .slide-description p {
@@ -239,6 +260,11 @@ main { flex-grow: 1;}
   color: #444444;
 }
 
+
+
+                      /*MAIN*/
+
+main { flex-grow: 1;}
 
 .main-category-list {
   font-size: 18px;
