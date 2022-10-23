@@ -30,7 +30,6 @@
 
 html {
   height: 100%;
-  background-color: #000000;
 }
 
 body {
@@ -124,18 +123,18 @@ h4,
   padding-bottom: 20px;margin-bottom: -70px;
 }
 
-.header .logo,
-.header section,
-.header nav,
-.header form,
-.header ul {
+header .logo,
+header section,
+header nav,
+header form,
+header ul {
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.logo {
-  margin-top: -25px;
+.header .logo {
+  margin-top: -20px;
   vertical-align: middle;
 }
 
