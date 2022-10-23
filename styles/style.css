@@ -456,18 +456,51 @@ li .service-visible {
 footer {
   color: #FFFFFF;
   background: #444444;
-
-
+  width: 100%;
 }
+
+.container-footer {
+  width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.37fr 4.26fr 1fr;
+  grid-template-areas: "logo . ."
+                       "address nav-service phone-number"
+                       ". nav-social academy-logo";
+}
+
+.container-footer section {display: contents;}
 
 footer a { color: #FFFFFF; }
 
 .footer-navigation-item a{
- font-size: 18px;
+  font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
+
+.logo-footer { grid-area: logo; }
+.address-footer { grid-area: address; }
+.nav-service-footer {
+  grid-area: nav-service;
+}
+.phone-number-footer { grid-area: phone-number; }
+.social-list {
+  grid-area: nav-social;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.academy-logo { grid-area: academy-logo; }
+
+.nav-service-footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+
 
 
 
