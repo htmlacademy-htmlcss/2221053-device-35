@@ -63,15 +63,6 @@ body {
   overflow: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: #000000;
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
 
 nav a,
 h1,
@@ -93,6 +84,8 @@ h4,
   line-height: 21px;
   text-align: center;
   vertical-align: middle;
+  text-decoration: none;
+
 }
 
 .link-button {
@@ -100,6 +93,8 @@ h4,
   letter-spacing: 0.2em;
   text-transform: uppercase;
   display: inline-block;
+  text-decoration: none;
+  color: #000000;
 }
 
                     /*...header*/
@@ -120,6 +115,11 @@ h4,
   padding-right: 60px;
   padding-left: 60px;
   padding-bottom: 20px;margin-bottom: -70px;
+}
+
+.header a {
+  color: #000000;
+  text-decoration: none;
 }
 
 header .logo,
@@ -175,6 +175,8 @@ header ul {
   justify-content: flex-start;
   flex-grow: 1;
   gap: 36px;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .item-name { flex-grow: 1; }
@@ -198,6 +200,8 @@ header ul {
   display: flex;
   justify-content: space-between;
   gap: 45px;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .header-nav-item:nth-child(2) { flex-grow: 1; }
@@ -209,6 +213,8 @@ header ul {
   line-height: calc(8 /9);
   text-transform: none;
   display: none;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 
@@ -218,7 +224,11 @@ header ul {
                               /*Slider section*/
 
 
-.slide-section { background: linear-gradient(to bottom, #ffe17f 26.5%, #FFFfff 26.5%); }
+.slide-section {
+  background: linear-gradient(to bottom, #ffe17f 26.5%, #FFFfff 26.5%);
+  list-style-type: none;
+  padding-left: 0;
+}
 
 .slide-section article{
   color: #000000;
@@ -279,6 +289,7 @@ header ul {
   display: flex;
   flex-direction: column;
   gap: 70px;
+  width:100%;
 }
 
 .main-category-list {
@@ -291,9 +302,16 @@ header ul {
   gap: 40px;
   max-width: 1160px;
   margin: 0 auto;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .main-category-list li { width: 160px; }
+
+.main-category-list a {
+  color: #000000;
+  text-decoration: none;
+}
 
 .services {
   background: linear-gradient(to bottom, #ffffff 26.087%, #F0F0F0 26.087%);
@@ -308,6 +326,8 @@ header ul {
   column-gap: calc( 116% / 11.6 );
   row-gap: 35px;
   padding-top: 65px;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .services-list li { display: contents; }
@@ -401,21 +421,28 @@ li .service-visible {
 .contacts .phone-number {
   text-decoration-line: underline;
   letter-spacing: 0;
+  color: #000000;
 }
 
 .subscription {
   background: #F0F0F0;
+}
 
+.subscription-container {
+  width: 1440px;
+  margin: 0 auto;
   padding: 64px 140px 56px 140px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 144px;
 }
+
 .subscription h2 {
   max-width: 348px;
   margin: 0;
 }
+
 .subscription p {
   max-width: 560px;
   margin: 0;
@@ -443,6 +470,8 @@ footer {
   color: #FFFFFF;
   background: #444444;
   width: 100%;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .container-footer {
@@ -459,11 +488,17 @@ footer {
 
 footer a { color: #FFFFFF; }
 
+.footer-page ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
 .footer-navigation-item a{
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .logo-footer { grid-area: logo; }
@@ -518,11 +553,23 @@ footer a { color: #FFFFFF; }
 .breadcrumb {
   display: flex;
   gap: 16px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.breadcrumb a {
+  color: #000000;
+  text-decoration: none;
 }
 
 .breadcrumb li+li::before {
   content: url(../images/more.svg);
   padding-right: 16px;
+}
+
+.catalog-main-section {
+  width: 100%;
+  background: #F0F0F0;
 }
 
 .container-main-section {
@@ -629,6 +676,8 @@ select option { font-weight: 400; }
   gap: 32px;
 }
 
+.product-card a { text-decoration: none; }
+
 .product-photo,
 .product-card .gold-button {
   grid-column-start: 1;
@@ -683,7 +732,11 @@ select option { font-weight: 400; }
   justify-content: center;
   margin: 0 40px;
   padding: 10px;
+  list-style-type: none;
+  padding-left: 0;
 }
+
+.navigation-catalog-pages a { text-decoration: none; }
 
 .page-number { text-align: center; }
 
