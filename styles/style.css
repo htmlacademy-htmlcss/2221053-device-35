@@ -37,7 +37,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: calc(5 / 4);
+  line-height: 20px;
   color: #444444;
   background: #FFFFFF;
 
@@ -167,7 +167,7 @@ header ul {
 .subscription form input,
 .subscription small {
   font-size: 18px;
-  line-height: calc(5 / 3);
+  line-height: 30px;
 }
 
 .user-menu {
@@ -210,7 +210,7 @@ header ul {
   font-family: 'Rubik', Arial, sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: calc(8 /9);
+  line-height: 18px;
   text-transform: none;
   display: none;
   list-style-type: none;
@@ -271,11 +271,11 @@ header ul {
 .slide-feature-value {
   font-weight: 400;
   font-size: 36px;
-  line-height: calc(5 / 6);
+  line-height: 30px;
 }
 
 .slide-feature {
-  line-height: calc(15 / 8);
+  line-height: 30px;
   text-align: left;
   color: #444444;
 }
@@ -294,7 +294,7 @@ header ul {
 
 .main-category-list {
   font-size: 18px;
-  line-height: calc(4 / 3);
+  line-height: 24px;
   letter-spacing: -0.02em;
 
   display: flex;
@@ -322,8 +322,8 @@ header ul {
   width: 1160px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: calc( 294% / 11.6 ) calc( 694% / 11.6 );
-  column-gap: calc( 116% / 11.6 );
+  grid-template-columns: 4fr 11fr;
+  column-gap: 116px;
   row-gap: 35px;
   padding-top: 65px;
   list-style-type: none;
@@ -333,8 +333,7 @@ header ul {
 .services-list li { display: contents; }
 
 .services-list .link-button {
-  width: calc( 160% / 2.94);
-  height: calc( 40em / 21 );
+  width: 54.4%;
   padding-top: 7.5px;
   padding-bottom: 7.5px;
 }
@@ -402,7 +401,7 @@ li .service-visible {
   padding-left: 34px;
   font-weight: 700;
   font-size: 18px;
-  line-height: calc(10 / 9);
+  line-height: 20px;
   letter-spacing: -0.02em;
   color: #000000;
 }
@@ -478,10 +477,15 @@ footer {
   width: 1160px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.37fr 4.26fr 1fr;
+  grid-template-columns: 3fr 8fr 2fr;
   grid-template-areas: "logo . ."
                        "address nav-service phone-number"
                        ". nav-social academy-logo";
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 25px;
+  padding-top: 62px;
+  padding-bottom: 61px;
 }
 
 .container-footer section {display: contents;}
@@ -524,6 +528,9 @@ footer a { color: #FFFFFF; }
   gap: 35px;
 }
 
+.phone-number-footer,
+.academy-logo { justify-self: end; }
+
 
 
 
@@ -534,6 +541,7 @@ footer a { color: #FFFFFF; }
 .catalog-main {
   display: block;
   width: 100%;
+  margin-bottom: -70px;
 }
 
 .catalog-main-header {
@@ -576,7 +584,7 @@ footer a { color: #FFFFFF; }
   color: #000000;
   background: #F0F0F0;
   display: grid;
-  grid-template-columns: 1fr 2.625fr;
+  grid-template-columns: 3fr 7fr;
   width: 1160px;
   margin: 0 auto;
 }
@@ -729,12 +737,15 @@ select option { font-weight: 400; }
   color: #444444;
   background: #EBEBEB;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0 40px;
   padding: 10px;
   list-style-type: none;
   padding-left: 0;
+  margin-bottom: 70px;
 }
+
+.navigation-catalog-pages a { color: #000000;}
 
 .navigation-catalog-pages a { text-decoration: none; }
 
@@ -749,9 +760,12 @@ select option { font-weight: 400; }
 
 .forward-page { text-align: right; }
 
-.page-number {
-  min-width: 2.5em;
-  flex-shrink: 0;
+.page-number-list {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .back-page a,
