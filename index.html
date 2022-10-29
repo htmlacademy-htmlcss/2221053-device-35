@@ -26,7 +26,7 @@
       </section>
       <nav>
         <ul class="header-nav-list">
-          <li>
+          <li class="header-nav-item">
             <a href="catalog.html">Каталог товаров</a>
             <button>+</button>
             <ul class="catalog-list">
@@ -38,9 +38,9 @@
               <li><a href="#">Квадрокоптеры</a></li>
             </ul>
           </li>
-          <li><a href="#services">Доставка</a></li>
-          <li><a href="#services">Гарантия</a></li>
-          <li><a href="#contacts">Контакты</a></li>
+          <li class="header-nav-item"><a href="#services">Доставка</a></li>
+          <li class="header-nav-item"><a href="#services">Гарантия</a></li>
+          <li class="header-nav-item"><a href="#contacts">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -185,17 +185,19 @@
         </article>
       </section>
       <section class="subscription">
-        <h2>Подпишитесь на рассылку</h2>
-        <p>Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами, распаковками,
-          а также акции, спецпредложения и вот это вот всё.</p>
-        <form class="subscription-form" name="mailing-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input type="email" name="mailing-edit" placeholder="Ваш e-mail">
-          <button type="submit">Подписаться</button>
-        </form>
-        <small>Это бесплатно</small>
+        <div class="subscription-container">
+          <h2>Подпишитесь на рассылку</h2>
+          <p>Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами, распаковками,
+            а также акции, спецпредложения и вот это вот всё.</p>
+          <form class="subscription-form" name="mailing-form" action="https://echo.htmlacademy.ru/" method="post">
+            <input type="email" name="mailing-edit" placeholder="Ваш e-mail">
+            <button type="submit">Подписаться</button>
+          </form>
+          <small>Это бесплатно</small>
+        </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer-page">
       <div class="container-footer">
           <a class="logo-footer" href="#"><img src="images/logo-footer.svg" width="145" height="36" alt="Логотип device"></a>
           <h2 class="visually-hidden">Адрес магазина.</h2>
