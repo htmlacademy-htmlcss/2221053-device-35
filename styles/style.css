@@ -921,7 +921,19 @@ footer a { color: #FFFFFF; }
 
 .social-list a:active img { opacity: 0.3; }
 
-.academy-logo { grid-area: academy-logo; }
+.academy-logo {
+  grid-area: academy-logo;
+  color: #FFC700
+}
+
+.academy-logo:hover { color: #ffffff; }
+
+.academy-logo:focus { outline: 2px solid #AF4FFF; }
+
+.academy-logo:active {
+  color: #ffffff;
+  opacity: 0.3;
+}
 
 .nav-service-footer ul {
   display: flex;
