@@ -908,6 +908,19 @@ footer a { color: #FFFFFF; }
   gap: 15px;
 }
 
+.social-list img {
+  display: block;
+  border-radius: 50%;
+}
+
+.social-list a:hover img { background-color: #ffc700; }
+
+.social-list a:focus { outline: 2px solid #AF4FFF; }
+
+.social-list a:active img { background-color: #ffc700; }
+
+.social-list a:active img { opacity: 0.3; }
+
 .academy-logo { grid-area: academy-logo; }
 
 .nav-service-footer ul {
