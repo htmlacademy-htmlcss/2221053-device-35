@@ -753,7 +753,10 @@ li .service-visible {
 
 .delivery:active img { opacity: 1; }
 
-.delivery:active { opacity: 0.3; }
+.delivery:active {
+  opacity: 0.3;
+  outline: none;
+}
 
 .info-section {
   display: flex;
@@ -893,6 +896,20 @@ footer a { color: #FFFFFF; }
   text-decoration: none;
 }
 
+.footer-navigation-item a:hover {
+  color:#ffc700;
+  text-decoration: underline;
+}
+
+.footer-navigation-item a:focus { outline: 2px solid #AF4FFF; }
+
+.footer-navigation-item a:active {
+  color:#ffc700;
+  text-decoration: underline;
+  opacity: 0.3;
+  outline: none;
+}
+
 .logo-footer { grid-area: logo; }
 
 .address-footer { grid-area: address; }
@@ -917,9 +934,14 @@ footer a { color: #FFFFFF; }
 
 .social-list a:focus { outline: 2px solid #AF4FFF; }
 
-.social-list a:active img { background-color: #ffc700; }
+.social-list a:active img {
+  background-color: #ffc700;
+  opacity: 0.3;
+}
 
-.social-list a:active img { opacity: 0.3; }
+.social-list a:active {
+  outline: none;
+}
 
 .academy-logo {
   grid-area: academy-logo;
@@ -933,6 +955,7 @@ footer a { color: #FFFFFF; }
 .academy-logo:active {
   color: #ffffff;
   opacity: 0.3;
+  outline: none;
 }
 
 .nav-service-footer ul {
