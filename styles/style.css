@@ -417,6 +417,16 @@ header ul {
   align-items: center;
 }
 
+.header-nav-item:nth-child(1) a:hover,
+.header-nav-item:nth-child(1) a:active {
+  box-shadow: none;
+}
+
+.header-nav-item:nth-child(1) a:hover .hidden-text,
+.header-nav-item:nth-child(1) a:active .hidden-text {
+  opacity: 1;
+}
+
 .catalog-list {
   font-family: 'Rubik', Arial, sans-serif;
   font-weight: 400;
