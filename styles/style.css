@@ -468,8 +468,25 @@ header ul {
   z-index: 1;
 }
 
+.header-nav-item:nth-child(1) input:checked .hidden-text::before {z-index: -1;}
 
+.header-nav-item:nth-child(1) input:checked~.catalog-list {
+  background-color: #ffe17f;
+  display: grid;
+}
 
+.catalog-list {
+  position: absolute;
+  z-index: 3;
+  display: grid;
+  top: 200px;
+  background-color: #FFE17F;
+  width: 1040px;
+  grid-template-columns: 222px 211px auto;
+  justify-content: start;
+  column-gap: 50px;
+  padding-top: 14px;
+}
 
 
 
