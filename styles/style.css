@@ -726,8 +726,6 @@ button:hover { cursor: pointer; }
 .services {
   background: linear-gradient(to bottom, #ffffff 26.087%, #F0F0F0 26.087%);
   padding-bottom: 72px;
-  width: 1160px;
-  margin: 0 auto;
 }
 
 .services-list {
@@ -738,6 +736,8 @@ button:hover { cursor: pointer; }
   padding-top: 65px;
   list-style-type: none;
   padding-left: 0;
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .services-list li { display: contents; }
@@ -750,25 +750,15 @@ button:hover { cursor: pointer; }
 
 .services-list .active {
   color: #FFE17F;
-  background: transparent;
-  position: relative;
-}
-
-.services-list .active::before {
-  content: "";
-  display: block;
-  background-color: #000000;
-  position: absolute;
-  height: 100%;
-  width: 184%;
-  top: 0;
-  z-index: -1;
+  background: #000000;
+  width: 100%;
+  padding-right: 45.6%;
 }
 
 .services-list .active:hover,
 .services-list .active:focus,
 .services-list .active:hover {
-  margin-left: 35px;
+  padding-right: calc(45.6% - 35px);
 }
 
 
