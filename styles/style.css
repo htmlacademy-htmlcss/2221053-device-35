@@ -797,6 +797,16 @@ li .service-visible {
   grid-row-end: 4;
   grid-column-start: 2;
   align-self: center;
+  position: relative;
+}
+
+.service-visible::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  border-left: #000000 7px solid;
+  left: -115px;
 }
 
 .service-visible h3 { margin: 0;}
