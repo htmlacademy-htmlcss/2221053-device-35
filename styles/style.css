@@ -877,6 +877,14 @@ li .service-visible {
   margin: 0 auto;
   width: 1160px;
   gap: 108px;
+  position: relative;
+}
+
+.info-section article::before {
+  content: "";
+  width: 84px;
+  border-top: #000000 7px solid;
+  position: absolute;
 }
 
 .about {
