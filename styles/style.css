@@ -30,6 +30,7 @@
 
 html {
   height: 100%;
+  min-width: 100%;
 }
 
 body {
@@ -41,13 +42,15 @@ body {
   color: #444444;
   background: #FFFFFF;
 
-  margin: 0 auto;
+  margin: 0;
   padding-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 70px;
+  width: 100vw;
+  min-width: 1440px;
 }
 
 .visually-hidden {
@@ -247,7 +250,8 @@ button:hover { cursor: pointer; }
   width: 1160px;
   padding-right: 60px;
   padding-left: 60px;
-  padding-bottom: 20px;margin-bottom: -70px;
+  padding-bottom: 20px;
+  margin-bottom: -70px;
 }
 
 .header a {
@@ -256,10 +260,10 @@ button:hover { cursor: pointer; }
 }
 
 .logo-header,
-header section,
-header nav,
-header form,
-header ul {
+.header section,
+.header nav,
+.header form,
+.header ul {
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
@@ -506,6 +510,8 @@ header ul {
   list-style-type: none;
   padding-left: 0;
   position: relative;
+  width: 1160px;
+  align-self: center;
 }
 
 .slider-navigation {
@@ -618,7 +624,7 @@ header ul {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 40px;
-  max-width: 1160px;
+  width: 1160px;
   margin: 0 auto;
   list-style-type: none;
   padding-left: 0;
@@ -720,11 +726,11 @@ header ul {
 .services {
   background: linear-gradient(to bottom, #ffffff 26.087%, #F0F0F0 26.087%);
   padding-bottom: 72px;
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .services-list {
-  width: 1160px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 4fr 11fr;
   column-gap: 116px;
@@ -915,12 +921,13 @@ li .service-visible {
 
 .subscription {
   background: #F0F0F0;
+  align-self: stretch;
 }
 
 .subscription-container {
-  width: 1440px;
+  width: 1160px;
   margin: 0 auto;
-  padding: 64px 140px 56px 140px;
+  padding: 64px 0 56px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -962,10 +969,10 @@ li .service-visible {
 
 
 
-footer {
+.footer-page {
   color: #FFFFFF;
   background: #444444;
-  width: 100%;
+  align-self: stretch;
   list-style-type: none;
   padding-left: 0;
 }
