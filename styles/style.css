@@ -293,11 +293,20 @@ button:hover { cursor: pointer; }
   float: left;
 }
 
-.search-form input { width: 69%; }
+.search-form input {
+  width: 69%;
+  padding: 8px 14px 8px 48px;
+  border-radius: 2rem 0 0 2rem;
+  background-image: url(../images/search.svg);
+  background-repeat: no-repeat;
+  background-position: 5% center;
+}
 
 .search-form button {
   width: 31%;
   border: #000000 solid 2px;
+  padding: 8px;
+  border-radius: 0 2rem 2rem 0;
 }
 
 .user-menu,
