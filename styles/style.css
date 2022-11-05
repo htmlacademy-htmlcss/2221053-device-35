@@ -958,6 +958,11 @@ li .service-visible {
   margin: 0;
 }
 
+.subscription-form {
+  width: 810px;
+  display: flex;
+}
+
 .subscription-form button {
   font-family: 'Raleway',Arial, sans-serif;
   font-weight: 800;
@@ -966,15 +971,26 @@ li .service-visible {
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  width: 253px;
+  padding: 18px;
 }
 
-.subscription form input { font: inherit; }
+.subscription input {
+  font: inherit;
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  border-bottom: #C4C4C4 3px solid;
+  padding: 11px 16px 14px;
+}
 
 .subscription small {
   background-image: url(../images/check-mark.svg);
   background-position: left center;
   background-repeat: no-repeat;
   padding-left: 32px;
+  display: flex;
+  align-items: center;
 }
 
 
