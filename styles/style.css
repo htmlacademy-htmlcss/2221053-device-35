@@ -53,6 +53,20 @@ body {
   min-width: 1440px;
 }
 
+.hidden { display: none; }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1134,7 +1148,203 @@ footer a { color: #FFFFFF; }
 .phone-number-footer,
 .academy-logo { justify-self: end; }
 
+/* Модальное окно доставки */
 
+
+.delivery-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 20;
+
+  font-family: 'Rubik', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.delivery-modal-form {
+  background-color: #ffffff;
+  padding: 72px 80px;
+  border: 10px solid #000000;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.delivery-modal-form input {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.delivery-modal-form fieldset {
+  border: none;
+  display: grid;
+  column-gap: 40px;
+  row-gap: 42px;
+  grid-template-columns: max-content auto max-content;
+  padding: 0;
+}
+
+.delivery-modal h2 {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  margin: 0;
+  margin-bottom: 42px;
+}
+
+.delivery-modal .wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.delivery-email-wrap {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.delivery-product-list-wrap {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.delivery-modal input {
+  padding: 20px;
+  background-color: #F0F0F0;
+  border: none;
+}
+
+.delivery-name-edit {
+  position: relative;
+  width: 360px;
+}
+
+.delivery-name-edit::before {
+  content: url(../images/user.svg);
+  display: block;
+  width: 15px;
+  height: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 25;
+}
+
+.delivery-email-edit {
+  width: 360px;
+}
+
+.error-delivery-email {
+  margin-top: -14px;
+  color: red;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.delivery-number-product-edit-wrap {
+  display: flex;
+  align-items: stretch;
+}
+
+.delivery-number-product-label span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  background-color: #ffe17f;
+  margin-left: 8px;
+}
+
+.delivery-number-product-label p { margin: 0; }
+
+.delivery-number-product-edit {
+  width: 60px;
+}
+
+.delivery-number-product-edit-wrap button {
+  font-size: 0;
+  position: relative;
+  height: 100%;
+  width: 60px;
+  border: none;
+
+}
+
+.delivery-number-product-edit-wrap button:last-child:after,
+.delivery-number-product-edit-wrap button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: #000000;
+  top: 50%;
+  left: 23px;
+}
+
+.delivery-number-product-edit-wrap button::after {
+  transform: rotate(90deg);
+}
+
+.delivery-modal .gold-button {
+  width: 200px;
+  height: 40px;
+  border: none;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.delivery-modal .close-button-wrap {
+  position: absolute;
+  top: 84px;
+  right: 80px;
+}
+
+.delivery-modal .close-button {
+  width: 26px;
+  height: 26px;
+  border: none;
+  position: relative;
+}
+
+.delivery-modal .close-button::before,
+.delivery-modal .close-button::after {
+  content: "";
+  display: block;
+  width: 37px;
+  height: 3px;
+  background-color: #000000;
+  position: absolute;
+  top: calc( 50% - 1px);
+  left: -6px;
+}
+
+.delivery-modal .close-button::before { transform: rotate(45deg); }
+
+.delivery-modal .close-button::after { transform: rotate(-45deg); }
 
 
 
@@ -1224,6 +1434,84 @@ footer a { color: #FFFFFF; }
   line-height: 20px;
   letter-spacing: -0.02em;
 }
+
+.range-scale {
+  position: relative;
+  width: 200px;
+  height: 4px;
+  margin-bottom: 16px;
+  border: 2px solid #DCDCDC;
+  margin-top: 30px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #000000;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: 2px solid #242424;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background-color: #000000;
+}
+
+.range-toggle:active,
+.range-toggle:focus {
+  outline: 3px solid #AF4FFF;
+}
+
+.toggle-min {
+  top: -8px;
+  left: -10px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: center;
+}
+
+.catalog-filter-label {
+  display: flex;
+  margin-right: 5px;
+}
+
+.range-input {
+  width: 50px;
+  padding: 0 2px;
+  font: inherit;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.filter-form fieldset {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  border: none;
+}
+
 
 .cost {
   font-size: 14px;
