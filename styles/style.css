@@ -1411,8 +1411,8 @@ footer a { color: #FFFFFF; }
   display: flex;
   flex-direction: column;
   gap: 35px;
-  align-items: flex-start;
   padding-left: 60px;
+  padding-right: 60px;
 }
 
 .filter-fieldset {
@@ -1420,6 +1420,27 @@ footer a { color: #FFFFFF; }
   grid-template-columns: max-content auto;
   column-gap: 16px;
   row-gap: 17px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-top: #000000 2px solid;
+}
+
+.filter-fieldset legend {
+  font-size: 0;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.filter-fieldset h3 {
+  position: absolute;
+  top: 100%;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
 }
 
 .filter h2, .sorted-selection h2{
@@ -1504,14 +1525,6 @@ footer a { color: #FFFFFF; }
   appearance: none;
   margin: 0;
 }
-
-.filter-form fieldset {
-  margin: 0;
-  margin-bottom: 40px;
-  padding: 0;
-  border: none;
-}
-
 
 .cost {
   font-size: 14px;

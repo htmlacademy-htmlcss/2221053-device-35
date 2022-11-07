@@ -64,11 +64,11 @@
       <section class="catalog-main-section">
         <div class="container-main-section">
           <h2 class="visually-hidden">Каталог товаров.</h2>
-          <section class="filter">
+          <article class="filter">
             <form class="filter-form" name="form-filter" action="https://echo.htmlacademy.ru/" method="get">
               <h2>Фильтр:</h2>
-              <fieldset form="form-filter">
-                <legend>Стоимость</legend>
+              <fieldset class="filter-fieldset" form="form-filter">
+                <legend><h3>Стоимость</h3></legend>
                   <div class="range">
                     <div class="range-scale">
                       <div class="range-bar" style="left: 0; width: 116px">
@@ -91,7 +91,7 @@
                   </div>
                 </fieldset>
               <fieldset class="filter-fieldset" form="form-filter">
-                <legend>Цвет</legend>
+                <legend><h3>Цвет</h3></legend>
                 <input type="checkbox" name="black" id="black" checked>
                   <label for="black">Черный</label>
                 <input type="checkbox" name="white" id="white" checked>
@@ -104,7 +104,7 @@
                   <label for="pink">Розовый</label>
               </fieldset>
               <fieldset class="filter-fieldset" form="form-filter">
-                <legend>Bluetooth</legend>
+                <legend><h3>Bluetooth</h3></legend>
                 <input type="radio" name="Bluetooth" id="yes" value="yes" checked>
                   <label for="yes">Есть</label>
                 <input type="radio" name="Bluetooth" id="no" value="no" checked>
@@ -112,7 +112,7 @@
               </fieldset>
               <button class="filter-form-button gold-button link-button" type="submit">Показать</button>
             </form>
-          </section>
+          </article>
           <section class="sorted-selection">
             <h2>Сортировка:</h2>
             <select name="sorted">
