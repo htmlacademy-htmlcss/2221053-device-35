@@ -85,30 +85,51 @@
                         от <input class="range-input" type="number" value="0" name="min-price">
                       </label>
                       <label class="catalog-filter-label">
-                        до <input class="range-input" type="number" value="5000" name="max-price" style="width: 37px">
+                        до <input class="range-input" type="number" value="5000" name="max-price" style="width: 44px">
                       </label>
                     </div>
                   </div>
                 </fieldset>
               <fieldset class="filter-fieldset" form="form-filter">
                 <legend><h3>Цвет</h3></legend>
-                <input type="checkbox" name="black" id="black" checked>
-                  <label for="black">Черный</label>
-                <input type="checkbox" name="white" id="white" checked>
-                  <label for="white">Белый</label>
-                <input type="checkbox" name="blue" id="blue">
-                  <label for="blue">Синий</label>
-                <input type="checkbox" name="red" id="red">
-                  <label for="red">Красный</label>
-                <input type="checkbox" name="pink" id="pink">
-                  <label for="pink">Розовый</label>
+                <label class="control">
+                  <input class="control-input visually-hidden" type="checkbox" name="black" id="black" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Черный</span>
+                </label>
+                <label class="control">
+                  <input class="control-input visually-hidden" type="checkbox" name="white" id="white" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Белый</span>
+                </label>
+                <label class="control">
+                  <input class="control-input visually-hidden" type="checkbox" name="blue" id="blue">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Синий</span>
+                </label>
+                <label class="control">
+                  <input class="control-input visually-hidden" type="checkbox" name="red" id="red">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Красный</span>
+                </label>
+                <label class="control">
+                  <input class="control-input visually-hidden" type="checkbox" name="pink" id="pink" disabled>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Розовый</span>
+                </label>
               </fieldset>
               <fieldset class="filter-fieldset" form="form-filter">
                 <legend><h3>Bluetooth</h3></legend>
-                <input type="radio" name="Bluetooth" id="yes" value="yes" checked>
-                  <label for="yes">Есть</label>
-                <input type="radio" name="Bluetooth" id="no" value="no" checked>
-                  <label for="no">Нет</label>
+                <label class="control">
+                  <input class="control-input visually-hidden" type="radio" name="Bluetooth" id="yes" value="yes" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Есть</span>
+                </label>
+                <label class="control">
+                  <input class="control-input visually-hidden" type="radio" name="Bluetooth" id="no" value="no">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Нет</span>
+                </label>
               </fieldset>
               <button class="filter-form-button gold-button link-button" type="submit">Показать</button>
             </form>
@@ -126,29 +147,37 @@
           <section class="product-list-section">
             <h2 class="visually-hidden">Список товаров.</h2>
             <ul class="product-list">
-              <li class="product-card">
-                <a class="product-photo" href="#"><img src="images/product-1.jpg" width="360" height="380" alt="Любительская селфи-палка"></a>
-                <a class="gold-button link-button" href="#">Подробнее</a>
-                <a href="#"><h3>Люительская селфи-палка</h3></a>
-                <span>500 ₽</span>
+              <li>
+                <a href="#" class="product-card">
+                  <img class="product-photo" src="images/product-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                  <div class="gold-button link-button">Подробнее</div>
+                  <h3>Люительская селфи-палка</h3>
+                  <span>500 ₽</span>
+                </a>
               </li>
-              <li class="product-card">
-                <a class="product-photo" href="#"><img src="images/product-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка "></a>
-                <a class="gold-button link-button" href="#">Подробнее</a>
-                <a href="#"><h3>Профессиональная селфи-палка </h3></a>
-                <span>1500 ₽</span>
+              <li>
+                <a href="#" class="product-card">
+                  <img class="product-photo" src="images/product-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка ">
+                  <div class="gold-button link-button">Подробнее</div>
+                  <h3>Профессиональная селфи-палка </h3>
+                  <span>1500 ₽</span>
+                </a>
               </li>
-              <li class="product-card">
-                <a class="product-photo" href="#"><img src="images/product-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка"></a>
-                <a class="gold-button link-button" href="#">Подробнее</a>
-                <a href="#"><h3>Непотопляемая селфи-палка</h3></a>
-                <span>2500 ₽</span>
+              <li>
+                <a href="#" class="product-card">
+                  <img class="product-photo" src="images/product-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                  <div class="gold-button link-button">Подробнее</div>
+                  <h3>Непотопляемая селфи-палка</h3>
+                  <span>2500 ₽</span>
+                </a>
               </li>
-              <li class="product-card">
-                <a class="product-photo" href="#"><img src="images/product-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»"></a>
-                <a class="gold-button link-button" href="#">Подробнее</a>
-                <a href="#"><h3>Селфи-палка «Следуй за мной»</h3></a>
-                <span>1500 ₽</span>
+              <li>
+                <a href="#" class="product-card">
+                  <img class="product-photo" src="images/product-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                  <div class="gold-button link-button">Подробнее</div>
+                  <h3>Селфи-палка «Следуй за мной»</h3>
+                  <span>1500 ₽</span>
+                </a>
               </li>
             </ul>
             <a class="link-button more-products" href="#">Загрузить еще</a>

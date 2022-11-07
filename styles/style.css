@@ -1416,10 +1416,6 @@ footer a { color: #FFFFFF; }
 }
 
 .filter-fieldset {
-  display: grid;
-  grid-template-columns: max-content auto;
-  column-gap: 16px;
-  row-gap: 17px;
   margin: 0;
   padding: 0;
   border: none;
@@ -1430,6 +1426,7 @@ footer a { color: #FFFFFF; }
   font-size: 0;
   position: relative;
   margin-bottom: 50px;
+  padding: 0;
 }
 
 .filter-fieldset h3 {
@@ -1449,16 +1446,9 @@ footer a { color: #FFFFFF; }
   text-transform: uppercase;
 }
 
-.filter-form legend {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-  letter-spacing: -0.02em;
-}
-
 .range-scale {
   position: relative;
-  width: 200px;
+  width: 100%;
   height: 4px;
   margin-bottom: 16px;
   border: 2px solid #DCDCDC;
@@ -1514,7 +1504,6 @@ footer a { color: #FFFFFF; }
   width: 50px;
   padding: 0 2px;
   font: inherit;
-  text-align: center;
   background-color: transparent;
   border: none;
   appearance: textfield;
@@ -1532,6 +1521,74 @@ footer a { color: #FFFFFF; }
   text-align: center;
   opacity: 0.3;
 }
+
+/* Control */
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+/* Mark */
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #CCCCCC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control-input:disabled + .control-mark {
+  border: 2px solid #CCCCCC;
+  opacity: 0.1;
+}
+
+.control-input:disabled ~ .control-label {
+  opacity: 0.1;
+}
+
+.control-input:checked + .control-mark {
+  border: 2px solid #000000;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  content: url("../images/check-mark-form.svg");
+}
+
+.control-input:focus + .control-mark {
+  outline: 2px solid #AF4FFF;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  width: 8px;
+  height: 8px;
+  background-color: #242424;
+  border-radius: 50%;
+  content: "";
+}
+
+.control-label {
+  line-height: 22px;
+  font-weight: 700;
+}
+
+
 
 .filter-form button {
   font-family: 'Raleway', Arial, sans-serif;
@@ -1615,6 +1672,7 @@ select option { font-weight: 400; }
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
   row-gap: 44px;
+  list-style: none;
 }
 
 .product-card {
@@ -1622,9 +1680,27 @@ select option { font-weight: 400; }
   grid-template-columns: auto max-content;
   grid-template-rows: auto auto;
   gap: 32px;
+  text-decoration: none;
+  padding: 2px;
 }
 
-.product-card a { text-decoration: none; }
+.product-card:hover .product-photo,
+.product-card:active .product-photo {
+  opacity: 0.2;
+}
+
+.product-card:hover h3 {
+  opacity: 0.6;
+}
+
+.product-card:hover .gold-button {
+  z-index: 1;
+}
+
+.product-card:active h3,
+.product-card:active span {
+  opacity: 0.3;
+}
 
 .product-photo,
 .product-card .gold-button {
@@ -1633,6 +1709,10 @@ select option { font-weight: 400; }
   grid-row-end: 2;
   align-self: center;
   justify-self: center;
+}
+
+.product-card:focus {
+  outline: 2px solid #AF4FFF;
 }
 
 .product-card .gold-button { order: -1; }
