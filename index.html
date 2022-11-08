@@ -26,7 +26,39 @@
           <li class="user-menu-item"><a href="#">Сравнить</a></li>
           <li class="user-menu-item">
             <h3 class="visually-hidden">Количество товаров в корзине</h3>
-            <a href="#">Корзина</a>
+            <a class="basket-button" href="#">Корзина</a>
+            <div class="popover">
+              <div class="popover-content">
+                <h2 class="visually-hidden">Корзина</h2>
+                <ul class="basket-list">
+                  <li class="product-basket-item">
+                    <a href="">
+                      <img class="product-basket-photo" src="/images/product-1.jpg" width="39px" height="43px" alt="">
+                      <p class="product-basket-title">Любительскаяя селфи-палка</p>
+                    </a>
+                    <button class="button-delete-product" type="button">Удалить товар из корзины</button>
+                  </li>
+                  <li class="product-basket-item">
+                    <a href="">
+                      <img class="product-basket-photo" src="/images/product-2.jpg" width="39px" height="43px" alt="">
+                      <p class="product-basket-title">Профнссиональная селфи-палка</p>
+                    </a>
+                    <button class="button-delete-product" type="button">Удалить товар из корзины</button>
+                  </li>
+                </ul>
+                <div class="basket-info">
+                  <p class="number-product-basket">
+                    <span>Товаров: </span>
+                    <span class="number-span">2</span>
+                  </p>
+                  <p class="summ-basket">
+                    <span>Сумма: </span>
+                    <span class="summ-span">2000</span>
+                  </p>
+                </div>
+                <a class="open-basket" href="#">Открыть корзину</a>
+              </div>
+            </div>
             <span class="quantity-goods">2</span>
           </li>
         </ul>

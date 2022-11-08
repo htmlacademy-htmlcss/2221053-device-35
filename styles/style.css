@@ -274,8 +274,7 @@ button:hover { cursor: pointer; }
 .logo-header,
 .header section,
 .header nav,
-.header form,
-.header ul {
+.header form {
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
@@ -359,7 +358,7 @@ button:hover { cursor: pointer; }
 
 .user-menu-item:last-child { position: relative; }
 
-.user-menu-item:last-child a{
+.user-menu-item:last-child > a{
   background-image: url(../images/basket.svg);
   background-repeat: no-repeat;
   background-position: left center;
@@ -386,6 +385,102 @@ button:hover { cursor: pointer; }
   min-height: 21px;
 }
 
+.popover {
+  width: 320px;
+  padding-bottom: 20px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFfff;
+  background-color: #000000;
+  display: none;
+  position: absolute;
+  left: -120px;
+  z-index: 1;
+}
+
+.popover::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 6px;
+  position: absolute;
+  top: -6px;
+  left: 153px;
+  background-image: url("../images/popover-top.svg");
+  background-repeat: no-repeat;
+}
+
+.basket-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding-left: 0;
+}
+
+.product-basket-item {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px;
+}
+
+.product-basket-item:not(1)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -20px;
+  width: 320px;
+  height: 1px;
+  background-color: #ffffff;
+  opacity: 0.1;
+}
+
+.product-basket-item a {
+  display: flex;
+  gap: 23px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.product-basket-title {
+  width: min-content;
+  margin: 0;
+  align-self: center;
+}
+
+.button-delete-product {
+  align-self: flex-start;
+  width: 10px;
+  height: 10px;
+  font-size: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url("../images/product-delete-button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.basket-info {
+  padding: 20px;
+  background-color: #1A1A1A;
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket-info p {
+  margin: 0;
+}
+
 .header-nav-list {
   font-family: 'Raleway', Arial, sans-serif;
   font-weight: 800;
@@ -399,6 +494,25 @@ button:hover { cursor: pointer; }
   gap: 45px;
   list-style-type: none;
   padding-left: 0;
+}
+
+.open-basket {
+  width: 280px;
+  padding: 15px 23px;
+  background-color: #ffffff;
+  margin: 20px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.header .basket-button:focus-within + .popover {
+  display: block;
 }
 
 .header-nav-item {
