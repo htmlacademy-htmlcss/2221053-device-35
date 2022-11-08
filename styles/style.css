@@ -1173,7 +1173,7 @@ footer a { color: #FFFFFF; }
   letter-spacing: -0.02em;
 }
 
-/* .hidden-modal { display: none; } */
+.hidden-modal { display: none; }
 
 .delivery-modal-form {
   background-color: #ffffff;
@@ -1216,9 +1216,44 @@ footer a { color: #FFFFFF; }
   gap: 14px;
 }
 
+.delivery-name-wrap {
+  position: relative;
+}
+
+.delivery-name-wrap::after {
+  content: "";
+  background-image: url("../images/ico-edit-name.svg");
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 12px;
+  right: 20px;
+  top: 57px;
+}
+
 .delivery-email-wrap {
   grid-column-start: 2;
   grid-column-end: 4;
+  position: relative;
+}
+
+.delivery-email-wrap::after {
+  content: "";
+  background-image: url("../images/ico-edit-mail.svg");
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 12px;
+  right: 20px;
+  top: 57px;
+}
+
+.delivery-modal .error-edit {
+  border: #FF3D3D solid 2px;
+}
+
+.delivery-modal .error-edit + .error-delivery-email {
+  color: #FF3D3D;;
 }
 
 .delivery-product-list-wrap {
@@ -1232,20 +1267,22 @@ footer a { color: #FFFFFF; }
   border: none;
 }
 
+.delivery-modal input:hover {
+  background-color: #DCDCDC;
+}
+
+.delivery-modal input:focus {
+  border: none;
+  outline: 2px solid #AF4FFF;
+}
+
+.delivery-modal input:disabled {
+  opacity: 0.3;
+}
+
 .delivery-name-edit {
   position: relative;
   width: 360px;
-}
-
-.delivery-name-edit::before {
-  content: url(../images/user.svg);
-  display: block;
-  width: 15px;
-  height: 12px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 25;
 }
 
 .delivery-email-edit {
@@ -1254,7 +1291,6 @@ footer a { color: #FFFFFF; }
 
 .error-delivery-email {
   margin-top: -14px;
-  color: red;
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -1393,6 +1429,18 @@ footer a { color: #FFFFFF; }
 
 .delivery-modal .close-button::after { transform: rotate(-45deg); }
 
+.delivery-modal .close-button:hover {
+  opacity: 0.6;
+}
+
+.delivery-modal .close-button:active {
+  opacity: 0.3;
+}
+
+.delivery-modal .close-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
 
 
                                             /*catalog.html
@@ -1524,7 +1572,7 @@ footer a { color: #FFFFFF; }
 
 .range-toggle:active,
 .range-toggle:focus {
-  outline: 3px solid #AF4FFF;
+  outline: 2px solid #AF4FFF;
 }
 
 .toggle-min {
