@@ -27,8 +27,41 @@
           <li class="user-menu-item"><a href="#">Сравнить</a></li>
           <li class="user-menu-item">
             <h3 class="visually-hidden">Количество товаров в корзине</h3>
-            <a href="#">Корзина</a>
-            <span class="quantity-goods">2</span>
+            <a class="basket-button" href="#">Корзина
+              <span class="quantity-goods">2</span>
+            </a>
+            <div class="popover hidden">
+              <div class="popover-content">
+                <h2 class="visually-hidden">Корзина</h2>
+                <ul class="basket-list">
+                  <li class="product-basket-item">
+                    <a href="">
+                      <img class="product-basket-photo" src="/images/product-1.jpg" width="39" height="43" alt="Любительскаяя селфи-палка">
+                      <p class="product-basket-title">Любительскаяя селфи-палка</p>
+                    </a>
+                    <button class="button-delete-product" type="button">Удалить товар из корзины</button>
+                  </li>
+                  <li class="product-basket-item">
+                    <a href="">
+                      <img class="product-basket-photo" src="/images/product-2.jpg" width="39" height="43" alt="Профнссиональная селфи-палка">
+                      <p class="product-basket-title">Профнссиональная селфи-палка</p>
+                    </a>
+                    <button class="button-delete-product" type="button">Удалить товар из корзины</button>
+                  </li>
+                </ul>
+                <div class="basket-info">
+                  <p class="number-product-basket">
+                    <span>Товаров: </span>
+                    <span class="number-span">2</span>
+                  </p>
+                  <p class="summ-basket">
+                    <span>Сумма: </span>
+                    <span class="summ-span">2000</span>
+                  </p>
+                </div>
+                <a class="open-basket" href="#">Открыть корзину</a>
+              </div>
+            </div>
           </li>
         </ul>
       </section>
@@ -58,8 +91,8 @@
     <section class="slide-section">
       <h2 class="visually-hidden">Слайдер-блок.</h2>
       <nav class="slider-navigation">
-        <button class="slide-button"><img src="images/next-slide.svg" width="20px" height="60px" alt="Предыдущий слайд."></button>
-        <button class="slide-button"><img src="images/next-slide.svg" width="20px" height="60px" alt="Следующий слайд."></button>
+        <button class="slide-button" type="button"><img src="images/next-slide.svg" width="20" height="60" alt="Предыдущий слайд."></button>
+        <button class="slide-button" type="button"><img src="images/next-slide.svg" width="20" height="60" alt="Следующий слайд."></button>
       </nav>
       <article class="slide-container slide-active">
         <img src="images/slider-1.png" width="560" height="560" alt="Квадрокоптер">
@@ -119,9 +152,9 @@
         </section>
       </article>
       <ul class="slide-indicator-list">
-        <li><button class="slide-indicator slide-indicator-active"><img src="images/slide-indicator-active.svg" width="12px" height="12px" alt="Первый слайд."></button></li>
-        <li><button class="slide-indicator"><img src="images/slide-indicator.svg" width="12px" height="12px" alt="Второй слайд."></button></li>
-        <li><button class="slide-indicator"><img src="images/slide-indicator.svg" width="12px" height="12px" alt="Третий слайд."></button></li>
+        <li><button class="slide-indicator slide-indicator-active" type="button"><img src="images/slide-indicator-active.svg" width="12" height="12" alt="Первый слайд."></button></li>
+        <li><button class="slide-indicator" type="button"><img src="images/slide-indicator.svg" width="12" height="12" alt="Второй слайд."></button></li>
+        <li><button class="slide-indicator" type="button"><img src="images/slide-indicator.svg" width="12" height="12" alt="Третий слайд."></button></li>
       </ul>
     </section>
     <main class="main-page">
@@ -167,9 +200,9 @@
         </ul>
       </section>
       <a class="delivery" href="#">
-        <p class="link-button" href="#">Доставим редкий товар под заказ</p>
+        <p class="link-button">Доставим редкий товар под заказ</p>
         <div class="information-button">
-          <div class="information"><img src="images/information.svg" width="2px" height="12px" alt="Информация"></div>
+          <div class="information"><img src="images/information.svg" width="2" height="12" alt="Информация"></div>
         </div>
       </a>
       <section class="info-section">
@@ -258,21 +291,20 @@
           </div>
           <div class="delivery-email-wrap wrap">
             <label class="delivery-email-label" for="delivery-email-edit">Ваш e-mail:</label>
-            <input class="delivery-email-edit" id="delivery-email-edit" name="email" type="email" placeholder="Введите e-mail">
+            <input class="delivery-email-edit error-edit" id="delivery-email-edit" name="email" type="email" placeholder="Введите e-mail" value="почта">
             <p class="error-delivery-email disabled">Забавный у вас адрес</p>
           </div>
           <div class="delivery-product-list-wrap wrap">
             <label class="delivery-product-list-label" for="delivery-product-list-edit">Что нужно привезти</label>
             <input class="deliveri-product-list-edit" id="delivery-product-list-edit" name="product-list" type="text"  placeholder="В свободной форме">
           </div>
-          <div class="delivery-number-product-wrap wrap">
-            <label class="delivery-number-product-label" for="delivery-number-product-edit">
-              <p>Количество:
-                <span>
-                  <img src="/images/information.svg" alt="Информация о доставке">
-                </span>
-                </p>
-            </label>
+          <div class="delivery-number-product-wrap">
+            <label class="delivery-number-product-label" for="delivery-number-product-edit">Количество:</label>
+            <a class="modal-information-button" href=""><img src="/images/information.svg" alt="Информация о доставке">
+              <div class="popover-delivery-modal">
+                <p>Постараемся найти, сколько нужно. Привезём сколько получится по требованиям <br>к провозу багажа.</p>
+              </div>
+            </a>
             <div class="delivery-number-product-edit-wrap">
               <button type="button">Уменьшить количество</button>
               <input class="delivery-number-product-edit" id="delivery-number-product-edit" name="number-product" type="number">
