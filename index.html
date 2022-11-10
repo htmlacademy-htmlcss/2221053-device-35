@@ -90,8 +90,8 @@
     <section class="slide-section">
       <h2 class="visually-hidden">Слайдер-блок.</h2>
       <nav class="slider-navigation">
-        <button class="slide-button"><img src="images/next-slide.svg" width="20" height="60" alt="Предыдущий слайд."></button>
-        <button class="slide-button"><img src="images/next-slide.svg" width="20" height="60" alt="Следующий слайд."></button>
+        <button class="slide-button" type="button"><img src="images/next-slide.svg" width="20" height="60" alt="Предыдущий слайд."></button>
+        <button class="slide-button" type="button"><img src="images/next-slide.svg" width="20" height="60" alt="Следующий слайд."></button>
       </nav>
       <article class="slide-container slide-active">
         <img src="images/slider-1.png" width="560" height="560" alt="Квадрокоптер">
@@ -151,9 +151,9 @@
         </section>
       </article>
       <ul class="slide-indicator-list">
-        <li><button class="slide-indicator slide-indicator-active"><img src="images/slide-indicator-active.svg" width="12" height="12" alt="Первый слайд."></button></li>
-        <li><button class="slide-indicator"><img src="images/slide-indicator.svg" width="12" height="12" alt="Второй слайд."></button></li>
-        <li><button class="slide-indicator"><img src="images/slide-indicator.svg" width="12" height="12" alt="Третий слайд."></button></li>
+        <li><button class="slide-indicator slide-indicator-active" type="button"><img src="images/slide-indicator-active.svg" width="12" height="12" alt="Первый слайд."></button></li>
+        <li><button class="slide-indicator" type="button"><img src="images/slide-indicator.svg" width="12" height="12" alt="Второй слайд."></button></li>
+        <li><button class="slide-indicator" type="button"><img src="images/slide-indicator.svg" width="12" height="12" alt="Третий слайд."></button></li>
       </ul>
     </section>
     <main class="main-page">
@@ -277,7 +277,7 @@
           </a>
       </div>
     </footer>
-    <div class="delivery-modal hidden">
+    <div class="delivery-modal">
       <form class="delivery-modal-form" name="delivery-modal-form" action="https://echo.htmlacademy.ru/" method="get">
         <div class="close-button-wrap">
           <button class="close-button" type="button"></button>
@@ -299,12 +299,11 @@
           </div>
           <div class="delivery-number-product-wrap">
             <label class="delivery-number-product-label" for="delivery-number-product-edit">Количество:</label>
-            <div class="modal-information-button">
-              <img src="/images/information.svg" alt="Информация о доставке">
+            <a class="modal-information-button" href=""><img src="/images/information.svg" alt="Информация о доставке">
               <div class="popover-delivery-modal">
                 <p>Постараемся найти, сколько нужно. Привезём сколько получится по требованиям <br>к провозу багажа.</p>
               </div>
-            </div>
+            </a>
             <div class="delivery-number-product-edit-wrap">
               <button type="button">Уменьшить количество</button>
               <input class="delivery-number-product-edit" id="delivery-number-product-edit" name="number-product" type="number">

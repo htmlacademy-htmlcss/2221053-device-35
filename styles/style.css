@@ -1187,7 +1187,7 @@ footer a { color: #FFFFFF; }
 
 .footer-navigation-item a:hover {
   color:#ffc700;
-  text-decoration: underline;
+  border-bottom: #ffc700 2px solid;
 }
 
 .footer-navigation-item a:focus {
@@ -1475,9 +1475,13 @@ footer a { color: #FFFFFF; }
   left: 147px;
 }
 
+.modal-information-button:hover,
+.modal-information-button:focus {
+  outline: none;
+}
+
 .modal-information-button:hover .popover-delivery-modal,
 .modal-information-button:focus .popover-delivery-modal {
-  outline: none;
   display: block;
 }
 
@@ -1496,7 +1500,6 @@ footer a { color: #FFFFFF; }
   height: 100%;
   width: 60px;
   border: none;
-
 }
 
 .delivery-number-product-edit-wrap button:last-child:after,
@@ -1514,6 +1517,28 @@ footer a { color: #FFFFFF; }
 .delivery-number-product-edit-wrap button::after {
   transform: rotate(90deg);
 }
+
+.delivery-number-product-edit-wrap button:hover,
+.delivery-number-product-edit-wrap button:hover {
+  background-color: #EBEBEB;
+}
+
+.delivery-number-product-edit-wrap button:hover::before,
+.delivery-number-product-edit-wrap button:hover::after {
+  opacity: 0.6;
+}
+
+.delivery-number-product-edit-wrap button:active::before,
+.delivery-number-product-edit-wrap button:active::after {
+  opacity: 0.3;
+}
+
+.delivery-number-product-edit-wrap button:focus,
+.delivery-number-product-edit-wrap button:focus {
+  outline: none;
+  border: 2px solid #AF4FFF;
+}
+
 
 .delivery-modal .gold-button {
   width: 200px;
@@ -1983,15 +2008,18 @@ select option { font-weight: 400; }
   margin: 0 40px;
   list-style-type: none;
   margin-bottom: 70px;
+  padding: 0;
 }
 
-.navigation-catalog-pages a { color: #000000;}
-
-.navigation-catalog-pages a { text-decoration: none; }
+.navigation-catalog-pages a {
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  width: min-content;
+}
 
 .page-number a {
   width: 40px;
-  display: block;
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
@@ -2008,15 +2036,17 @@ select option { font-weight: 400; }
 
 .back-page a { padding: 25px; }
 
-.forward-page { text-align: right; }
-
-.forward-page a { padding: 25px; }
+.forward-page a {
+  margin: 0 0 0 auto;
+  padding: 25px;
+}
 
 .page-number-list {
   text-decoration: none;
   list-style: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .back-page a,

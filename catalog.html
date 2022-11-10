@@ -16,34 +16,71 @@
       </a>
       <section>
         <form class="search-form" name="search-form" action="https://echo.htmlacademy.ru/" method="get">
-          <input class="search-edit" type="search" name="search-edit" placeholder="Поиск по сайту">
-          <button type="submit">Найти</button>
+          <label class="visually-hidden" for="search">Поиск по сайту.</label>
+          <input class="search-edit" id="search" type="search" name="search-edit" placeholder="Поиск по сайту">
+          <button class="submit" type="submit">Найти</button>
         </form>
         <h2 class="visually-hidden">Меню пользователя.</h2>
         <ul class="user-menu">
           <li class="item-name user-menu-item"><a href="#">Николай Петухов</a></li>
-          <li><a href="#">Выйти</a></li>
+          <li class="user-menu-item"><a href="#">Выйти</a></li>
           <li class="user-menu-item"><a href="#">Сравнить</a></li>
           <li class="user-menu-item">
             <h3 class="visually-hidden">Количество товаров в корзине</h3>
-            <span class="quantity-goods">2</span>
-            <a href="#">Корзина</a>
+            <a class="basket-button" href="#">Корзина
+              <span class="quantity-goods">2</span>
+            </a>
+            <div class="popover hidden">
+              <div class="popover-content">
+                <h2 class="visually-hidden">Корзина</h2>
+                <ul class="basket-list">
+                  <li class="product-basket-item">
+                    <a href="">
+                      <img class="product-basket-photo" src="/images/product-1.jpg" width="39" height="43" alt="Любительскаяя селфи-палка">
+                      <p class="product-basket-title">Любительскаяя селфи-палка</p>
+                    </a>
+                    <button class="button-delete-product" type="button">Удалить товар из корзины</button>
+                  </li>
+                  <li class="product-basket-item">
+                    <a href="">
+                      <img class="product-basket-photo" src="/images/product-2.jpg" width="39" height="43" alt="Профнссиональная селфи-палка">
+                      <p class="product-basket-title">Профнссиональная селфи-палка</p>
+                    </a>
+                    <button class="button-delete-product" type="button">Удалить товар из корзины</button>
+                  </li>
+                </ul>
+                <div class="basket-info">
+                  <p class="number-product-basket">
+                    <span>Товаров: </span>
+                    <span class="number-span">2</span>
+                  </p>
+                  <p class="summ-basket">
+                    <span>Сумма: </span>
+                    <span class="summ-span">2000</span>
+                  </p>
+                </div>
+                <a class="open-basket" href="#">Открыть корзину</a>
+              </div>
+            </div>
           </li>
         </ul>
       </section>
       <nav>
         <ul class="header-nav-list">
           <li class="header-nav-item">
-            <a href="catalog.html">Каталог товаров</a>
-            <button>+</button>
-            <ul class="catalog-list">
-              <li><a href="#">Виртуальная реальность</a></li>
-              <li><a href="catalog.html">Моноподы для селфи</a></li>
-              <li><a href="#">Экшн-камеры</a></li>
-              <li><a href="#">Фитнес-браслеты</a></li>
-              <li><a href="#">Умные часы</a></li>
-              <li><a href="#">Квадрокоптеры</a></li>
-            </ul>
+            <input class="catalog-cheked" type="checkbox" id="catalog-checked" hidden>
+            <a href="#">
+              <label for="catalog-checked">Каталог товаров</label>
+              <label class="hidden-text" for="catalog-checked">Развернуть категории.</label>
+            </a>
+            <nav class="catalog-list">
+              <a href="#">Виртуальная реальность</a>
+              <a href="#">Фитнес-браслеты</a>
+              <a href="#">Квадрокоптеры</a>
+              <a href="catalog.html">Моноподы для селфи</a>
+              <a href="#">Умные часы</a>
+              <a href="#">Экшн-камеры</a>
+            </nav>
           </li>
           <li class="header-nav-item"><a href="#services">Доставка</a></li>
           <li class="header-nav-item"><a href="#services">Гарантия</a></li>
@@ -72,10 +109,10 @@
                   <div class="range">
                     <div class="range-scale">
                       <div class="range-bar" style="left: 0; width: 116px">
-                        <button class="range-toggle toggle-min">
+                        <button class="range-toggle toggle-min" type="button">
                           <span class="visually-hidden">Изменить минимальную цену.</span>
                         </button>
-                        <button class="range-toggle toggle-max">
+                        <button class="range-toggle toggle-max" type="button">
                           <span class="visually-hidden">Изменить максимальную цену.</span>
                         </button>
                       </div>
