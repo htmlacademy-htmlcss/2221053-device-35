@@ -1859,6 +1859,20 @@ footer a { color: #FFFFFF; }
   font-family: 'Rubik',Arial, sans-serif;
   font-size: 18px;
   line-height: 30px;
+  border: none;
+  background-color: transparent;
+}
+
+.sorted-selection select:hover {
+  opacity: 0.6;
+}
+
+.sorted-selection select:active {
+  opacity: 0.3;
+}
+
+.sorted-selection select:focus {
+  outline: 2px solid #AF4FFF;
 }
 
 select option { font-weight: 400; }
