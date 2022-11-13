@@ -23,7 +23,7 @@
         <h2 class="visually-hidden">Меню пользователя.</h2>
         <ul class="user-menu">
           <li class="item-name user-menu-item"><a href="#">Николай Петухов</a></li>
-          <li class="user-menu-item"><a href="#">Выйти</a></li>
+          <li class="user-menu-item disabled"><a href="#">Выйти</a></li>
           <li class="user-menu-item"><a href="#">Сравнить</a></li>
           <li class="user-menu-item">
             <h3 class="visually-hidden">Количество товаров в корзине</h3>
@@ -36,14 +36,14 @@
                 <ul class="basket-list">
                   <li class="product-basket-item">
                     <a href="">
-                      <img class="product-basket-photo" src="/images/product-1.jpg" width="39" height="43" alt="Любительскаяя селфи-палка">
-                      <p class="product-basket-title">Любительскаяя селфи-палка</p>
+                      <img class="product-basket-photo" src="images/product-1.jpg" width="39" height="43" alt="Любительскаяя селфи-палка">
+                      <p class="product-basket-title">Любительская селфи-палка</p>
                     </a>
                     <button class="button-delete-product" type="button">Удалить товар из корзины</button>
                   </li>
                   <li class="product-basket-item">
                     <a href="">
-                      <img class="product-basket-photo" src="/images/product-2.jpg" width="39" height="43" alt="Профнссиональная селфи-палка">
+                      <img class="product-basket-photo" src="images/product-2.jpg" width="39" height="43" alt="Профнссиональная селфи-палка">
                       <p class="product-basket-title">Профнссиональная селфи-палка</p>
                     </a>
                     <button class="button-delete-product" type="button">Удалить товар из корзины</button>
@@ -68,10 +68,9 @@
       <nav>
         <ul class="header-nav-list">
           <li class="header-nav-item">
-            <input class="catalog-cheked" type="checkbox" id="catalog-checked" hidden>
-            <a href="#">
-              <label for="catalog-checked">Каталог товаров</label>
-              <label class="hidden-text" for="catalog-checked">Развернуть категории.</label>
+            <a class="catalog-button" href="#">
+              <span>Каталог товаров</span>
+              <span>Развернуть категории.</span>
             </a>
             <nav class="catalog-list">
               <a href="#">Виртуальная реальность</a>
@@ -83,21 +82,11 @@
             </nav>
           </li>
           <li class="header-nav-item"><a href="#services">Доставка</a></li>
-          <li class="header-nav-item"><a href="#services">Гарантия</a></li>
+          <li class="header-nav-item"><a class="current" href="#services">Гарантия</a></li>
           <li class="header-nav-item"><a href="#contacts">Контакты</a></li>
         </ul>
       </nav>
     </header>
-    <main class="catalog-main">
-      <header class="catalog-main-header">
-        <h1>Моноподы для селфи</h1>
-        <ul class="breadcrumb">
-          <li><a class="breadcrumb-link" href="index.html">Главная</a></li>
-          <li><a class="breadcrumb-link" href="catalog.html">Каталог товаров</a></li>
-          <!-- Возможно должна быть ссылка якорь на категории в index.html-->
-          <li><a class="breadcrumb-link" href="catalog.html">Моноподы для селфи</a></li>
-        </ul>
-      </header>
       <section class="catalog-main-section">
         <div class="container-main-section">
           <h2 class="visually-hidden">Каталог товаров.</h2>
@@ -150,7 +139,7 @@
                   <span class="control-label">Красный</span>
                 </label>
                 <label class="control">
-                  <input class="control-input visually-hidden" type="checkbox" name="pink" id="pink" disabled>
+                  <input class="control-input visually-hidden" type="checkbox" name="pink" id="pink">
                   <span class="control-mark"></span>
                   <span class="control-label">Розовый</span>
                 </label>
@@ -168,7 +157,7 @@
                   <span class="control-label">Нет</span>
                 </label>
               </fieldset>
-              <button class="filter-form-button gold-button link-button" type="submit">Показать</button>
+              <button class="filter-form-button gold-button" type="submit">Показать</button>
             </form>
           </article>
           <section class="sorted-selection">
@@ -187,7 +176,7 @@
               <li>
                 <a href="#" class="product-card">
                   <img class="product-photo" src="images/product-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-                  <div class="gold-button link-button">Подробнее</div>
+                  <div class="gold-button">Подробнее</div>
                   <h3>Люительская селфи-палка</h3>
                   <span>500 ₽</span>
                 </a>
@@ -195,7 +184,7 @@
               <li>
                 <a href="#" class="product-card">
                   <img class="product-photo" src="images/product-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка ">
-                  <div class="gold-button link-button">Подробнее</div>
+                  <div class="gold-button">Подробнее</div>
                   <h3>Профессиональная селфи-палка </h3>
                   <span>1500 ₽</span>
                 </a>
@@ -203,7 +192,7 @@
               <li>
                 <a href="#" class="product-card">
                   <img class="product-photo" src="images/product-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-                  <div class="gold-button link-button">Подробнее</div>
+                  <div class="gold-button">Подробнее</div>
                   <h3>Непотопляемая селфи-палка</h3>
                   <span>2500 ₽</span>
                 </a>
@@ -211,15 +200,15 @@
               <li>
                 <a href="#" class="product-card">
                   <img class="product-photo" src="images/product-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                  <div class="gold-button link-button">Подробнее</div>
+                  <div class="gold-button">Подробнее</div>
                   <h3>Селфи-палка «Следуй за мной»</h3>
                   <span>1500 ₽</span>
                 </a>
               </li>
             </ul>
-            <a class="link-button more-products" href="#">Загрузить еще</a>
+            <a class="more-products" href="#">Загрузить ещё</a>
             <ul class="navigation-catalog-pages">
-              <li class="back-page back-forward-page"><a href="#">Назад</a></li>
+              <li class="back-page back-forward-page"><a class="disabled" href="#">Назад</a></li>
               <ul class="page-number-list">
                 <li class="page-number active-page"><a href="#">1</a></li>
                 <li class="page-number"><a href="#">2</a></li>
