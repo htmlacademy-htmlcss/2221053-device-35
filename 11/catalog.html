@@ -102,10 +102,10 @@
         <div class="container-main-section">
           <h2 class="visually-hidden">Каталог товаров.</h2>
           <article class="filter">
-            <form class="filter-form" name="form-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <form class="filter-form" name="form-filter" id="form-filter" action="https://echo.htmlacademy.ru/" method="get">
               <h2>Фильтр:</h2>
               <fieldset class="filter-fieldset" form="form-filter">
-                <legend>&nbsp</legend>
+                <legend>&nbsp;</legend>
                 <h3>Стоимость</h3>
                   <div class="range">
                     <div class="range-scale">
@@ -120,16 +120,16 @@
                     </div>
                     <div class="range-wrapper-inputs">
                       <label class="catalog-filter-label">
-                        от<input class="range-input" type="number" value="0" name="min-price" style="width: 20">
+                        от<input class="range-input" type="number" value="0" name="min-price" style="width: 20px">
                       </label>
                       <label class="catalog-filter-label">
-                        до<input class="range-input" type="number" value="5000" name="max-price" style="width: 44">
+                        до<input class="range-input" type="number" value="5000" name="max-price" style="width: 44px">
                       </label>
                     </div>
                   </div>
                 </fieldset>
               <fieldset class="filter-fieldset" form="form-filter">
-                <legend>&nbsp</legend>
+                <legend>&nbsp;</legend>
                 <h3>Цвет</h3>
                 <label class="control">
                   <input class="control-input visually-hidden" type="checkbox" name="black" id="black" checked>
@@ -158,7 +158,7 @@
                 </label>
               </fieldset>
               <fieldset class="filter-fieldset bluetooth" form="form-filter">
-                <legend>&nbsp</legend>
+                <legend>&nbsp;</legend>
                 <h3>Bluetooth</h3>
                 <label class="control">
                   <input class="control-input visually-hidden" type="radio" name="Bluetooth" id="yes" value="yes" checked>
@@ -180,8 +180,8 @@
               <option selected>Популярные</option>
             </select>
             <div class="container-sorted-button">
-              <a class="sorted-button" href="#"><img src="images/sorted-button.svg" alt="По возрастанию"></a>
-              <a class="sorted-button" href="#"><img src="images/sorted-button.svg" alt="По убыванию"></a>
+              <a class="sorted-button" href="#"><img src="images/sorted-button.svg" width="12" height="10" alt="По возрастанию"></a>
+              <a class="sorted-button" href="#"><img src="images/sorted-button.svg" width="12" height="10" alt="По убыванию"></a>
             </div>
           </section>
           <section class="product-list-section">
@@ -223,13 +223,15 @@
             <a class="more-products" href="#">Загрузить ещё</a>
             <ul class="navigation-catalog-pages">
               <li class="back-page back-forward-page"><a class="disabled" href="#">Назад</a></li>
-              <ul class="page-number-list">
-                <li class="page-number active-page"><a href="#">1</a></li>
-                <li class="page-number"><a href="#">2</a></li>
-                <li class="page-number"><a href="#">3</a></li>
-                <li class="page-number"><a>...</a></li>
-                <li class="page-number"><a href="#">15</a></li>
-              </ul>
+              <li>
+                <ul class="page-number-list">
+                  <li class="page-number active-page"><a href="#">1</a></li>
+                  <li class="page-number"><a href="#">2</a></li>
+                  <li class="page-number"><a href="#">3</a></li>
+                  <li class="page-number"><a>...</a></li>
+                  <li class="page-number"><a href="#">15</a></li>
+                </ul>
+              </li>
               <li class="forward-page back-forward-page"><a href="#">Вперёд</a></li>
             </ul>
           </section>
@@ -255,12 +257,12 @@
           </nav>
           <h2 class="visually-hidden">Мы в социальных сетях:</h2>
           <div class="social-list">
-            <a href="#"><img src="images/facebook.svg" width="40" alt="facebook"></a>
-            <a href="#"><img src="images/instagram.svg" width="40" alt="Instagram"></a>
-            <a href="#"><img src="images/twitter.svg" width="40" alt="Twitter"></a>
+            <a href="#"><img src="images/facebook.svg" width="40" height="40" alt="facebook"></a>
+            <a href="#"><img src="images/instagram.svg" width="40" height="40" alt="Instagram"></a>
+            <a href="#"><img src="images/twitter.svg" width="40" height="40" alt="Twitter"></a>
           </div>
           <h2 class="visually-hidden">Наш  телефон:</h2>
-          <a class="phone-number-footer" href="#">Тел.: +7 (812) 812-12-12</a>
+          <a class="phone-number-footer" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
           <h2 class="visually-hidden">Созданием сайта занималась компания HTML-академия.</h2>
           <a class="academy-logo" href="https://echo.htmlacademy.ru/" aria-label="Логотип HTML-академии.">
             <svg xmlns="http://www.w3.org/2000/svg" width="115" height="33" fill="currentColor" viewBox="0 0 115 33">
