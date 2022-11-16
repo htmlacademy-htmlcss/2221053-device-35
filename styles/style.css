@@ -49,7 +49,7 @@ body {
   justify-content: space-between;
 
   width: 100%;
-  min-width: 1440px;
+  min-width: 1170px;
   margin: 0;
   padding-top: 40px;
 
@@ -85,12 +85,8 @@ input[type="number"]:focus {
   clip-path: inset(100%);
 }
 
-
 nav a,
-h1,
-h2,
-h3,
-h4,
+.title,
 .gold-button,
 .main-category-list {
   font-family: "Raleway", "Arial", sans-serif;
@@ -128,7 +124,7 @@ h4,
   border: 3px solid #c4c4c4;
 }
 
-button:hover {
+.button:hover {
   cursor: pointer;
 }
 
@@ -262,7 +258,6 @@ button:hover {
 }
 
 /*...header*/
-
 .header,
 .search-form input,
 .search-form button {
@@ -438,6 +433,10 @@ button:hover {
   flex-grow: 1;
 }
 
+.basket-button:focus + .popover {
+  display: block;
+}
+
 .quantity-goods {
   font-size: 14px;
   font-weight: 400;
@@ -476,6 +475,11 @@ button:hover {
 
   color: #ffffff;
   background-color: #000000;
+  display: none;
+}
+
+.basket-item:focus-within .popover {
+  display: block;
 }
 
 .popover::before {
@@ -743,7 +747,7 @@ button:hover {
   justify-self: start;
 }
 
-.catalog-button:focus-within ~ .catalog-list {
+.header-nav-item:nth-child(1):focus-within .catalog-list {
   position: absolute;
   z-index: 3;
   top: 53px;
@@ -836,7 +840,6 @@ button:hover {
   color: #000000;
 }
 
-
 .slide-section .slide-active {
   display: flex;
 
@@ -857,6 +860,7 @@ button:hover {
 
 .slide-description h3 {
   margin-bottom: 28px;
+  line-height: 50px;
 }
 
 .slide-description .gold-button {
@@ -980,10 +984,12 @@ button:hover {
   gap: 32px;
 }
 
-.main-category-link a::before {
+.main-category-link::before {
   display: block;
 
   height: 160px;
+
+  content: "";
 
   background-color: #ffe17f;
   background-repeat: no-repeat;
@@ -991,81 +997,28 @@ button:hover {
 }
 
 .main-category-link:first-child::before {
-  display: block;
-
-  height: 160px;
-
-  content: "";
-
-  background-color: #ffe17f;
   background-image: url("../images/virtual.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .main-category-link:nth-child(2)::before {
-  display: block;
-
-  height: 160px;
-
-  content: "";
-
-  background-color: #ffe17f;
   background-image: url("../images/monopads.svg");
-  background-repeat: no-repeat;
   background-position: center bottom;
 }
 
 .main-category-link:nth-child(3)::before {
-  display: block;
-
-  height: 160px;
-
-  content: "";
-
-  background-color: #ffe17f;
   background-image: url("../images/cameras.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .main-category-link:nth-child(4)::before {
-  display: block;
-
-  height: 160px;
-
-  content: "";
-
-  background-color: #ffe17f;
   background-image: url("../images/braslets.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .main-category-link:nth-child(5)::before {
-  display: block;
-
-  height: 160px;
-
-  content: "";
-
-  background-color: #ffe17f;
   background-image: url("../images/watch.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .main-category-link:nth-child(6)::before {
-  display: block;
-
-  height: 160px;
-
-  content: "";
-
-  background-color: #ffe17f;
   background-image: url("../images/quadrocopters.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .main-category-link:hover::before {
@@ -1084,7 +1037,7 @@ button:hover {
 
 .services {
   margin-top: 12px;
-  padding-bottom: 137px;
+  padding-bottom: 102px;
 
   background: linear-gradient(to bottom, #ffffff 103px, #f0f0f0 103px);
 }
@@ -1094,13 +1047,14 @@ button:hover {
 
   width: 1160px;
   margin: 0 auto;
-  padding-top: 65px;
+  padding-top: 45px;
   padding-left: 0;
 
   list-style-type: none;
 
   grid-template-columns: 283px auto;
   column-gap: 120px;
+  grid-template-rows: min-content min-content min-content auto;
   row-gap: 35px;
 }
 
@@ -1112,6 +1066,10 @@ button:hover {
   margin-right: 119px;
 
   grid-column-start: 1;
+}
+
+.services-list .first {
+  margin-top: 20px;
 }
 
 .services-list .active {
@@ -1141,7 +1099,7 @@ button:hover {
 
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position: 557px 50%;
+  background-position: 558px 60px;
 }
 
 .delivery-description {
@@ -1156,20 +1114,23 @@ button:hover {
   background-image: url("../images/credit.svg");
 }
 
-li .service-visible {
+.services-list .service-visible {
+  padding-top: 57px;
+  padding-bottom: 20px;
+  margin-top: -48px;
   position: relative;
 
   display: block;
   align-self: center;
 
   grid-row-start: 1;
-  grid-row-end: 4;
+  grid-row-end: 5;
   grid-column-start: 2;
 }
 
 .service-visible::before {
   position: absolute;
-  top: -72px;
+  top: -17px;
   left: -122px;
 
   display: block;
@@ -1184,6 +1145,7 @@ li .service-visible {
 
 .service-visible h3 {
   margin: 0;
+  line-height: 50px;
 }
 
 .services-description p {
@@ -1411,6 +1373,7 @@ li .service-visible {
   max-width: 348px;
   margin: 0;
   padding-left: 6px;
+  line-height: 1em;
 }
 
 .subscription p {
@@ -1492,7 +1455,6 @@ li .service-visible {
   color: #ff3d3d;
 }
 
-
 .subscription small {
   display: flex;
   align-items: center;
@@ -1553,7 +1515,7 @@ li .service-visible {
   display: contents;
 }
 
-footer a {
+.footer-page a {
   color: #ffffff;
 }
 
@@ -1627,7 +1589,6 @@ footer a {
   box-shadow: none;
 }
 
-
 .social-list {
   display: flex;
   flex-wrap: wrap;
@@ -1639,26 +1600,26 @@ footer a {
   gap: 7px;
 }
 
-.social-list a {
+.social-link {
   padding: 4px;
 }
 
-.social-list img {
+.social-link img {
   display: block;
 
   border-radius: 50%;
 }
 
-.social-list a:hover img {
+.social-link:hover img {
   background-color: #ffc700;
 }
 
-.social-list a:focus {
+.social-link:focus {
   outline: none;
   box-shadow: inset 0 0 0 2px #af4fff;
 }
 
-.social-list a:active img {
+.social-link:active img {
   opacity: 0.3;
   background-color: #ffc700;
 }
@@ -1702,7 +1663,6 @@ footer a {
 }
 
 /* Модальное окно доставки */
-
 
 .delivery-modal {
   font-family: "Rubik", "Arial", sans-serif;
@@ -1997,7 +1957,6 @@ footer a {
   border: 2px solid #af4fff;
   outline: none;
 }
-
 
 .delivery-modal .gold-button {
   font-size: 18px;
@@ -2393,7 +2352,6 @@ footer a {
   line-height: 20px;
 }
 
-
 .filter-form-button {
   align-self: flex-start;
 
@@ -2438,7 +2396,7 @@ footer a {
   outline: 2px solid #af4fff;
 }
 
-select option {
+.sorted-selection option {
   font-weight: 400;
 }
 
@@ -2484,7 +2442,6 @@ select option {
   opacity: 1;
   box-shadow: none;
 }
-
 
 .product-list-section {
   display: flex;
