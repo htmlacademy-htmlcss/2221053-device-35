@@ -59,12 +59,24 @@ body {
   gap: 70px;
 }
 
+.number::-webkit-inner-spin-button,
+.number:hover::-webkit-inner-spin-button,
+.number:focus::-webkit-inner-spin-button,
+.number::-webkit-outer-spin-button,
+.number:hover::-webkit-outer-spin-button,
+.number:focus::-webkit-outer-spin-button {
+  appearance: none;
+}
+
 input[type="number"],
 input[type="number"]:hover,
 input[type="number"]:focus {
-  z-index: 1;
-
   appearance: none;
+  -moz-appearance: textfield;
+}
+
+input[type="number"]:focus {
+  z-index: 1;
 }
 
 .visually-hidden {
@@ -258,6 +270,7 @@ nav a,
 }
 
 /*...header*/
+
 .header,
 .search-form input,
 .search-form button {
@@ -1691,11 +1704,13 @@ nav a,
 .delivery-modal-form {
   position: relative;
 
-  padding: 72px 80px;
+  padding: 63px 70px 47px 70px;
 
   border: 10px solid #000000;
   background-color: #ffffff;
   box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  max-height: 100vh;
 }
 
 .delivery-modal-form input {
@@ -1781,13 +1796,15 @@ nav a,
   box-shadow: inset 0 0 0 2px #ff3d3d;
 }
 
-.delivery-modal .error-edit + .error-delivery-email {
-  color: #ff3d3d;
+.error-edit + .error-delivery-email {
+  display: block;
 }
 
 .delivery-product-list-wrap {
   grid-column-start: 1;
   grid-column-end: 3;
+
+  margin-top: -15px;
 }
 
 .delivery-modal input {
@@ -1828,6 +1845,8 @@ nav a,
   line-height: 20px;
 
   margin-top: -14px;
+  color: #ff3d3d;
+  display: none;
 }
 
 .delivery-number-product-edit-wrap {
@@ -1840,6 +1859,7 @@ nav a,
 
 .modal-information-button {
   position: relative;
+  margin-top: -4px;
 
   display: flex;
   align-items: center;
@@ -1847,8 +1867,6 @@ nav a,
 
   width: 26px;
   height: 26px;
-  margin-top: -4px;
-  margin-left: 8px;
 
   border: none;
   border-radius: 50%;
@@ -1860,6 +1878,7 @@ nav a,
 
   grid-template-columns: 120px auto;
   row-gap: 12px;
+  margin-top: -15px;
 }
 
 .popover-delivery-modal {
@@ -1904,6 +1923,7 @@ nav a,
 
 .delivery-number-product-edit {
   width: 60px;
+  text-align: center;
 }
 
 .delivery-number-product-edit-wrap button {
@@ -1920,7 +1940,7 @@ nav a,
 .delivery-number-product-edit-wrap button:last-child::after,
 .delivery-number-product-edit-wrap button::before {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 4px);
   left: 23px;
 
   display: block;
@@ -1970,6 +1990,9 @@ nav a,
   text-transform: uppercase;
 
   border: none;
+
+  margin-bottom: 18px;
+  margin-top: -3px;
 }
 
 .delivery-modal .close-button-wrap {
@@ -1980,6 +2003,8 @@ nav a,
 
 .delivery-modal .close-button {
   position: relative;
+  top: -15px;
+  right: -10px;
 
   width: 26px;
   height: 26px;
@@ -2065,8 +2090,8 @@ nav a,
   color: #000000;
 }
 
-.breadcrumb li + li::before {
-  padding-right: 16px;
+.breadcrumb-item:not(:last-child)::after {
+  padding-left: 16px;
 
   content: url("../images/more.svg");
 }
@@ -2644,6 +2669,7 @@ nav a,
   align-items: center;
   justify-content: space-between;
 
+  padding-top: 14px;
   padding-left: 0;
 
   list-style: none;

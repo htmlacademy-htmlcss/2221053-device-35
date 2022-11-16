@@ -310,7 +310,7 @@
           </a>
       </div>
     </footer>
-    <div class="delivery-modal hidden">
+    <div class="delivery-modal">
       <form class="delivery-modal-form" name="delivery-modal-form" action="https://echo.htmlacademy.ru/" method="get">
         <div class="close-button-wrap">
           <button class="button close-button" type="button"></button>
@@ -335,14 +335,14 @@
           <div class="delivery-number-product-wrap">
             <label class="delivery-number-product-label" for="delivery-number-product-edit">Количество:</label>
             <a class="modal-information-button" href="">
-              <img src="/images/information.svg" width="2" height="12" alt="Информация о доставке.">
+              <img src="images/information.svg" width="2" height="12" alt="Информация о доставке.">
               <div class="popover-delivery-modal">
                 <p>Постараемся найти, сколько нужно. Привезём сколько получится по требованиям <br>к провозу багажа.</p>
               </div>
             </a>
             <div class="delivery-number-product-edit-wrap">
               <button class="button" type="button">Уменьшить количество</button>
-              <input class="delivery-number-product-edit" id="delivery-number-product-edit" name="number-product" type="number" value="1" min="1">
+              <input class="number delivery-number-product-edit" id="delivery-number-product-edit" name="number-product" type="number" value="1" min="1">
               <button class="button" type="button">Увеличить количество</button>
             </div>
           </div>
