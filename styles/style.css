@@ -387,7 +387,7 @@ nav a,
 .contacts p,
 .contacts .phone-number,
 .subscription p,
-.subscription form input,
+.subscription input,
 .subscription small {
   font-size: 18px;
   line-height: 30px;
