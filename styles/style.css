@@ -930,14 +930,13 @@ nav a,
 .slide-indicator-list {
   display: flex;
   justify-content: center;
-
-  margin: 0 auto;
-  margin-top: -23px;
+  align-self: stretch;
+  margin: -23px auto 0 auto;
   padding: 0;
-
   list-style: none;
-
   gap: 20px;
+  position: relative;
+  bottom: 0;
 }
 
 .slide-indicator-list button {
