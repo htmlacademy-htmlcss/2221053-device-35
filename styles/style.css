@@ -930,14 +930,13 @@ nav a,
 .slide-indicator-list {
   display: flex;
   justify-content: center;
-
-  margin: 0 auto;
-  margin-top: -23px;
+  align-self: stretch;
+  margin: -23px auto 0 auto;
   padding: 0;
-
   list-style: none;
-
   gap: 20px;
+  position: relative;
+  bottom: 0;
 }
 
 .slide-indicator-list button {
@@ -1637,7 +1636,7 @@ nav a,
   background-color: #ffc700;
 }
 
-.academy-logo {
+.footer-page .academy-logo {
   margin-top: 2px;
 
   color: #ffc700;
@@ -2457,6 +2456,7 @@ nav a,
 .sorted-button:focus {
   opacity: 1;
   box-shadow: 0 0 0 2px #f0f0f0, 0 0 0 4px #af4fff;
+  outline: none;
 }
 
 .sorted-button:hover img {
